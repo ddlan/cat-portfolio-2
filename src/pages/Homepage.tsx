@@ -6,7 +6,6 @@ const Homepage = () => {
   return (
     <Box>
       <Navbar />
-      Hello
     </Box>
   );
 }
