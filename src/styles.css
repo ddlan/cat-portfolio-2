@@ -1,2 +1,50 @@
-.App {
+.nav {
+  align-items: flex-start;
+  background-color: var(--variable-collection-light);
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 24px;
+  display: inline-flex;
+  gap: 8px;
+  padding: 8px;
+  position: relative;
+}
+
+.nav .element {
+  align-items: center;
+  background-color: var(--variable-collection-light);
+  border-radius: 18px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.nav .text-wrapper {
+  color: var(--variable-collection-text);
+  font-family: "Nunito-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.56px;
+  line-height: 18px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.nav .div-wrapper {
+  align-items: center;
+  border-radius: 18px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px 24px;
+  position: relative;
 }
