@@ -13,7 +13,8 @@ module.exports = {
                 "node": true
             },
             "files": [
-                ".eslintrc.{js,cjs}"
+                ".eslintrc.{js,cjs}",
+                "*.js"
             ],
             "parserOptions": {
                 "sourceType": "script"
@@ -28,5 +29,10 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "semi": "off",
+        'max-len': ["error", { "code": 80 }],
+
+        "@typescript-eslint/semi": ["error", "always"],
+        "@typescript-eslint/no-unused-vars": ["warn"],
     }
 }
