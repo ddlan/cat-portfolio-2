@@ -1,7 +1,7 @@
 import { Card } from '@chakra-ui/react';
 import styled from 'styled-components';
 
-export const StyledCard = styled(Card).attrs({
+export const SCard = styled(Card).attrs({
   border: '1px solid #515151'
 })`
     border-radius: 12px;

@@ -1,7 +1,7 @@
 import React, { type FC } from 'react';
 import { Box, Grid, GridItem, HStack } from '@chakra-ui/react';
 import '../styles/styles.css';
-import { StyledCard } from '../styles/components';
+import { SCard } from '../styles/components';
 import { HEIGHT, MARGIN } from '../styles/constants';
 import Navbar from '../components/Navbar';
 import BrowserSidebar from '../components/BrowserSidebar';
@@ -18,7 +18,7 @@ const Homepage: FC = () => {
   return (
     <Box>
       <Navbar />
-      <StyledCard
+      <SCard
         h={`calc(100vh - ${HEIGHT.navbar} - ${MARGIN.homepageB})`}
         mx={MARGIN.homepageX}
         mb={MARGIN.homepageB}
@@ -40,7 +40,7 @@ const Homepage: FC = () => {
             }
           </Grid>
         </HStack>
-      </StyledCard>
+      </SCard>
     </Box>
   );
 };

@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 import '../styles/styles.css';
-import { StyledCard } from '../styles/components';
+import { SCard } from '../styles/components';
 
 interface TProps {
   name: string
@@ -8,14 +8,14 @@ interface TProps {
 
 const CaseStudyCard: FC<TProps> = ({ name }) => {
   return (
-    <StyledCard
+    <SCard
       w='100%'
       h='100%'
       textAlign='center'
       justify='center'
     >
       {name}
-    </StyledCard>
+    </SCard>
   );
 };
 
