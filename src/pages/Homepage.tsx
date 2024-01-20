@@ -1,12 +1,12 @@
-import { Container } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import '../styles.css';
 import Navbar from '../components/Navbar';
 
 const Homepage = () => {
   return (
-    <Container>
+    <Box>
       <Navbar />
-    </Container>
+    </Box>
   );
 }
 

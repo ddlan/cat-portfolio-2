@@ -1,24 +1,29 @@
-import { HStack, Image, Text } from '@chakra-ui/react';
+import { Box, HStack, Image, Link as ChakraLink, Text } from '@chakra-ui/react';
 import '../styles.css';
 import '../styleguide.css';
 import cat from '../images/Cat.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <HStack justify='space-between' height='98px' width='100%'>
-      <Image src={cat} alt='Cat icon' boxSize="32px"/>
-      <Text>CAT HOANG</Text>
+    <HStack justify='space-between' height='98px' mx='100px'>
+      <Link to="/">
+        <HStack style={{ cursor: 'pointer' }}>
+          <Image src={cat} alt='Cat icon' boxSize="32px"/>
+          <Text>CAT HOANG</Text>
+        </HStack>
+      </Link>
 
-      <div className="nav">
-      <div className="element">
-        <div className="text-wrapper">Work</div>
-      </div>
-      <div className="div-wrapper">
-        <div className="text-wrapper">About</div>
-      </div>
-    </div>
+      <Box className="nav">
+        <Box className="element">
+          <Box className="text-wrapper">Work</Box>
+        </Box>
+        <Box className="div-wrapper">
+          <Box className="text-wrapper">About</Box>
+        </Box>
+     </Box>
 
-    <a>Resume</a>
+    <ChakraLink >↪ Resume</ChakraLink>
     </HStack>
   );
 }
