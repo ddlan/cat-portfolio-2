@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'AdobeClean';
+  font-weight: 200;
+  src: local('AdobeClean'), url('./fonts/AdobeClean/AdobeClean-SemiLight.otf') format('opentype'),
+}
+
+@font-face {
+  font-family: 'AdobeClean';
+  font-weight: 300;
+  src: local('AdobeClean'), url('./fonts/AdobeClean/AdobeClean-Light.otf') format('opentype'),
+}
+
+@font-face {
+  font-family: 'AdobeClean';
+  font-weight: 400;
+  src: local('AdobeClean'), url('./fonts/AdobeClean/AdobeClean-Regular.otf') format('opentype'),
+}
+
+@font-face {
+  font-family: 'AdobeClean';
+  font-weight: 500;
+  src: local('AdobeClean'), url('./fonts/AdobeClean/AdobeClean-Medium.otf') format('opentype'),
+}
+
+@font-face {
+  font-family: 'AdobeClean';
+  font-weight: 700;
+  src: local('AdobeClean'), url('./fonts/AdobeClean/AdobeClean-Bold.otf') format('opentype'),
+}
+
+@font-face {
+  font-family: 'AdobeClean';
+  font-weight: 800;
+  src: local('AdobeClean'), url('./fonts/AdobeClean/AdobeClean-ExtraBold.otf') format('opentype'),
+}
+
+@font-face {
+  font-family: 'AdobeClean';
+  font-weight: 900;
+  src: local('AdobeClean'), url('./fonts/AdobeClean/AdobeClean-Black.otf') format('opentype'),
+}

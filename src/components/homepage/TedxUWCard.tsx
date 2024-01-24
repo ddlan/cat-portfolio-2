@@ -2,8 +2,8 @@ import React, { type FC } from 'react';
 import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-import tedGroundWindmill from '../images/ted-ground-windmill.svg';
-import '../styles/styles.css';
+import tedGroundWindmill from '../../images/ted-ground-windmill.svg';
+import '../../styles/styles.css';
 
 const groundMotion = {
   rest: {
@@ -76,14 +76,15 @@ const TedxUWCard: FC = () => {
       style={{
         position: 'absolute',
         bottom: '-4%',
-        borderRadius: '12px'
+        borderRadius: '12px',
+        minWidth: '350px'
       }}
       variants={groundMotion}
     />
-    <Box className="tedxuw-logo">
-      <Box className="ted-text-tedx">
+    <Box className="ted-title-container">
+      <Box className="card-titlex">
         <motion.div
-          className="ted-text-ted"
+          className="card-title card-title-tedx"
           variants={tedxMotion}
         >
           TED

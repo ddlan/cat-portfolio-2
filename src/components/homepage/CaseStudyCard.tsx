@@ -1,7 +1,8 @@
 import React, { type ReactNode, type FC } from 'react';
-import '../styles/styles.css';
-import { SCard } from '../styles/components';
+import '../../styles/styles.css';
+import { SCard } from '../../styles/components';
 import TedxUWCard from './TedxUWCard';
+import AdobeCard from './AdobeCard';
 
 interface TProps {
   name: string
@@ -11,6 +12,9 @@ const CaseStudyCard: FC<TProps> = ({ name }) => {
   const renderBody = (): ReactNode => {
     switch (name) {
       case 'TedxUW': return <TedxUWCard />;
+      case 'Adobe': return <AdobeCard />;
+      case 'Challenge': return null;
+      case 'TechNova': return null;
       default: return null;
     }
   };

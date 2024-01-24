@@ -4,8 +4,8 @@ import '../styles/styles.css';
 import { SCard } from '../styles/components';
 import { HEIGHT, MARGIN } from '../styles/constants';
 import Navbar from '../components/Navbar';
-import BrowserSidebar from '../components/BrowserSidebar';
-import CaseStudyCard from '../components/CaseStudyCard';
+import BrowserSidebar from '../components/homepage/BrowserSidebar';
+import CaseStudyCard from '../components/homepage/CaseStudyCard';
 
 const Homepage: FC = () => {
   const caseStudies = [

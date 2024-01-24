@@ -1,3 +1,5 @@
+@import "fonts.css";
+
 .nav {
   align-items: flex-start;
   background-color: var(--navbar-dark);
@@ -61,28 +63,29 @@
   justify-content: center;  
 }
 
-.text .tedxuw-logo {
+.text .ted-title-container {
   height: 46px;
-  margin-right: -6px;
   position: relative;
   width: 195px;
 }
 
-.text .ted-text-tedx {
+.text .card-titlex {
   height: 46px;
   width: 111px;
   font-family: "Inter", Helvetica;
 }
 
-.text .ted-text-ted {
-
+.text .card-title {
   font-size: 45.2px;
   font-weight: 900;
-  left: 0;
   line-height: 46px;
-  position: absolute;
-  top: 0;
   white-space: nowrap;
+}
+
+.text .card-title-tedx {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .text .ted-text-x {
@@ -116,4 +119,9 @@
   position: relative;
   text-align: center;
   width: fit-content;
+}
+
+.text .adobe {
+  font-family: "AdobeClean", Helvetica;
+  position: relative;
 }

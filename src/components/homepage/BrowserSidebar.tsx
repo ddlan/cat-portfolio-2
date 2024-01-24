@@ -1,7 +1,7 @@
 import React, { type FC } from 'react';
 import { Box, HStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import '../styles/styles.css';
+import '../../styles/styles.css';
 import styled from 'styled-components';
 
 const SFadingCircle = styled(motion.div)`
