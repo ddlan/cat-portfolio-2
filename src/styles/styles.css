@@ -49,3 +49,71 @@
   position: relative;
   cursor: pointer;
 }
+
+.text {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: center;  
+}
+
+.text .tedxuw-logo {
+  height: 46px;
+  margin-right: -6px;
+  position: relative;
+  width: 195px;
+}
+
+.text .ted-text-tedx {
+  height: 46px;
+  width: 111px;
+  font-family: "Inter", Helvetica;
+}
+
+.text .ted-text-ted {
+
+  font-size: 45.2px;
+  font-weight: 900;
+  left: 0;
+  line-height: 46px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.text .ted-text-x {
+  font-size: 27.5px;
+  font-weight: 900;
+  left: 90px;
+  line-height: 28px;
+  position: absolute;
+  top: 3px;
+  white-space: nowrap;
+}
+
+.text .ted-text-uw {
+  font-family: "Inter", Helvetica;
+  font-size: 45.2px;
+  font-weight: 100;
+  left: 115px;
+  line-height: 46px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.text .ted-text-platform {
+  font-family: "Nunito-Italic", Helvetica;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.12px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}

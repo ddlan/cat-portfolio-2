@@ -1,12 +1,20 @@
-import React, { type FC } from 'react';
+import React, { type ReactNode, type FC } from 'react';
 import '../styles/styles.css';
 import { SCard } from '../styles/components';
+import TedxUWCard from './TedxUWCard';
 
 interface TProps {
   name: string
 };
 
 const CaseStudyCard: FC<TProps> = ({ name }) => {
+  const renderBody = (): ReactNode => {
+    switch (name) {
+      case 'TedxUW': return <TedxUWCard />;
+      default: return null;
+    }
+  };
+
   return (
     <SCard
       w='100%'
@@ -14,7 +22,7 @@ const CaseStudyCard: FC<TProps> = ({ name }) => {
       textAlign='center'
       justify='center'
     >
-      {name}
+      {renderBody()}
     </SCard>
   );
 };
