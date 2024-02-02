@@ -4,6 +4,7 @@ import { SCard } from '../../styles/components';
 import TedxUWCard from './TedxUWCard';
 import AdobeCard from './AdobeCard';
 import ChallengeCard from './ChallengeCard';
+import TechNovaCard from './TechNovaCard';
 
 interface TProps {
   name: string
@@ -15,7 +16,7 @@ const CaseStudyCard: FC<TProps> = ({ name }) => {
       case 'TedxUW': return <TedxUWCard />;
       case 'Adobe': return <AdobeCard />;
       case 'Challenge': return <ChallengeCard />;
-      case 'TechNova': return null;
+      case 'TechNova': return <TechNovaCard />;
       default: return null;
     }
   };
