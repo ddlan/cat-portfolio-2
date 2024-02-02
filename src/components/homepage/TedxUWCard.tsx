@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import tedGroundWindmill from '../../images/ted-ground-windmill.svg';
 import '../../styles/styles.css';
+import { Link } from 'react-router-dom';
 
 const groundMotion = {
   rest: {
@@ -62,54 +63,56 @@ const otherTextMotion = {
 
 const TedxUWCard: FC = () => {
   return (
-    <motion.div
-      className="text"
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-      style={{ display: 'flex', overflow: 'hidden' }}
-    >
-    <motion.img
-      src={tedGroundWindmill}
-      alt='ground with windmill'
-      width='100%'
-      style={{
-        position: 'absolute',
-        bottom: '-4%',
-        borderRadius: '12px',
-        minWidth: '350px'
-      }}
-      variants={groundMotion}
-    />
-    <Box className="ted-title-container">
-      <Box className="card-titlex">
+    <Link to='tedxuw' className="text">
+      <motion.div
+        className="text"
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+        style={{ display: 'flex', overflow: 'hidden' }}
+      >
+      <motion.img
+        src={tedGroundWindmill}
+        alt='ground with windmill'
+        width='100%'
+        style={{
+          position: 'absolute',
+          bottom: '-4%',
+          borderRadius: '12px',
+          minWidth: '350px'
+        }}
+        variants={groundMotion}
+      />
+      <Box className="ted-title-container">
+        <Box className="card-titlex">
+          <motion.div
+            className="card-title card-title-tedx"
+            variants={tedxMotion}
+          >
+            TED
+          </motion.div>
+          <motion.div
+            className="ted-text-x"
+            variants={tedxMotion}
+          >
+            X
+          </motion.div>
+        </Box>
         <motion.div
-          className="card-title card-title-tedx"
-          variants={tedxMotion}
+          className="ted-text-uw"
+          variants={otherTextMotion}
         >
-          TED
-        </motion.div>
-        <motion.div
-          className="ted-text-x"
-          variants={tedxMotion}
-        >
-          X
+          UW
         </motion.div>
       </Box>
       <motion.div
-        className="ted-text-uw"
+        className="ted-text-platform"
         variants={otherTextMotion}
       >
-        UW
+        Cross-Platform // Motion
       </motion.div>
-    </Box>
-    <motion.div
-      className="ted-text-platform"
-      variants={otherTextMotion}
-    >
-      Cross-Platform // Motion
     </motion.div>
-  </motion.div>
+  </Link>
   );
 };
 

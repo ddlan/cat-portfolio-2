@@ -6,6 +6,7 @@ import React, { type FC } from 'react';
 
 import './styles/styles.css';
 import Homepage from './pages/Homepage';
+import TedxUW from './pages/TedxUW';
 import { customTheme } from './theme';
 
 const App: FC = () =>
@@ -17,6 +18,7 @@ const App: FC = () =>
           <Routes>
             <Route path="/" element={<Homepage/> } />
             <Route path="/about" element={<Homepage/> } />
+            <Route path="/tedxuw" element={<TedxUW/> } />
           </Routes>
         </Box>
         </ColorModeProvider>

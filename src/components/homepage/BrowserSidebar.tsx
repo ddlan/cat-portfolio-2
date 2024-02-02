@@ -1,6 +1,6 @@
 import React, { useState, type FC } from 'react';
 import {
-  Divider, HStack, Heading, Image, ListItem,
+  HStack, Heading, Image, ListItem,
   Text, UnorderedList, VStack
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import cat from '../../images/sidebar-cat.png';
 import happyCat from '../../images/sidebar-happy-cat.png';
 import lock from '../../images/lock.svg';
+import { SDivider } from '../../styles/components';
 import '../../styles/styles.css';
 
 const SFadingCircle = styled(motion.div)`
@@ -71,14 +72,14 @@ const BrowserSidebar: FC = () => {
         >
           <Image className='cat-in-box' src={catIsHovered ? happyCat : cat} />
         </motion.div>
-        <Divider width='80%' borderBottomWidth='2px' my='16px'/>
+        <SDivider/>
         <Heading as='h2' size='sm' color='#ffffffc0'>Lover of</Heading>
         <UnorderedList>
           <ListItem color='#ffffffc0'>Storytelling</ListItem>
           <ListItem color='#ffffffc0'>Hidden Easter Eggs ;))</ListItem>
           <ListItem color='#ffffffc0'>Multi-purpose products</ListItem>
         </UnorderedList>
-        <Divider width='80%' borderBottomWidth='2px' my='16px'/>
+        <SDivider/>
     </VStack>
   );
 };
