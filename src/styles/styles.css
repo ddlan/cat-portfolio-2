@@ -125,3 +125,9 @@
   font-family: "AdobeClean", Helvetica;
   position: relative;
 }
+
+.text .challenge {
+  font-family: "ClashDisplay", Helvetica;
+  font-weight: 500;
+  position: relative;
+}
