@@ -10,6 +10,7 @@ import '../styles/styles.css';
 import Navbar from '../components/Navbar';
 import Intro from '../components/tedxuw/Intro';
 import Problem from '../components/tedxuw/Problem';
+import Empathy from '../components/tedxuw/Empathy';
 
 const TedxUW: FC = () => {
   return (
@@ -20,13 +21,15 @@ const TedxUW: FC = () => {
         mx='20vw'
       >
         <Intro />
-
         <Spacer height='200px' />
+
         <Image src={portfolio} />
         <Spacer height='200px' />
 
         <Problem />
+        <Spacer height='200px' />
 
+        <Empathy />
         <Spacer height='200px' />
       </Box>
     </Box>

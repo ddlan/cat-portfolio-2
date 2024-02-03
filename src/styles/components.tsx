@@ -35,9 +35,3 @@ export const BodyText = styled(Text).attrs({
 export const Pink = styled.span`
   color: #F890BA
 `;
-export const CTACard = styled(SCard).attrs({
-  p: '20px',
-  flex: '1',
-  width: '100%',
-  height: '100%'
-})``;

@@ -1,18 +1,27 @@
 import React, { type FC } from 'react';
 import {
-  HStack,
+  Box, HStack,
   Image, ListItem,
+  Spacer,
   UnorderedList, VStack
 } from '@chakra-ui/react';
+import styled from 'styled-components';
 
 import bulletImg from '../../images/bullet.svg';
 import folder from '../../images/folder.svg';
 import jordan from '../../images/jordan.png';
 import {
   SCard, SDivider, SideHeading, BodyText,
-  Pink, SectionHeading, Title, CTACard
+  Pink, SectionHeading, Title
 } from '../../styles/components';
 import '../../styles/styles.css';
+
+const CTACard = styled(SCard).attrs({
+  p: '20px',
+  flex: '1',
+  width: '100%',
+  height: '100%'
+})``;
 
 interface TBodyCardProps {
   title: string
@@ -62,9 +71,46 @@ const SmallCard: FC<TSmallCardProps> = ({
   );
 };
 
+const MainCard: FC = () => {
+  return (
+    <SCard p='24px' flex='2' alignItems='center'>
+      <HStack>
+        <Image src={jordan} width='150px' borderRadius='8px' />
+        <VStack alignItems='start' gap='0' ml='12px'>
+          <SectionHeading style={{ marginBottom: '0' }}>
+            Jordan
+          </SectionHeading>
+          <SideHeading mb='8px' style={{ marginTop: '0' }}>
+            New in Career / Running an Early Start-up
+          </SideHeading>
+          <BodyText flexGrow="1">
+            {/* eslint-disable-next-line max-len */}
+            Jordan is a recent graduate and has had a few internships. Jordan is dabbling in personal and professional projects to help navigate what they want to do with their life.
+          </BodyText>
+        </VStack>
+      </HStack>
+      <SDivider
+        style={{ marginTop: '30px', marginBottom: '24px', width: '90%' }}
+      />
+      <HStack alignItems='start' gap='12px'>
+        <BodyCard title='Job to be done' bullets={[
+          'Gaining insight and inspiration for career / personal paths',
+          'Personal growth and learning new perspectives',
+          'Networking and building professional relationships'
+        ]} flex='3' />
+        <BodyCard title='High-Level Goals' bullets={[
+          'Learning from others',
+          'Self-discovery',
+          'Collaboration'
+        ]} flex='2' />
+      </HStack>
+    </SCard>
+  );
+};
+
 const Problem: FC = () => {
   return (
-    <>
+    <Box alignItems='start'>
       <HStack mb='20px' alignItems='center' gap='12px'>
         <Image src={folder} width='36px' mb='10px' />
         <Title> The Problem</Title>
@@ -105,38 +151,7 @@ const Problem: FC = () => {
       </VStack>
 
       <HStack mt='24px' alignItems='stretch'>
-        <SCard p='24px' flex='2' alignItems='center'>
-          <HStack>
-            <Image src={jordan} width='150px' borderRadius='8px' />
-            <VStack alignItems='start' gap='0' ml='12px'>
-              <SectionHeading style={{ marginBottom: '0' }}>
-                Jordan
-              </SectionHeading>
-              <SideHeading mb='8px' style={{ marginTop: '0' }}>
-                New in Career / Running an Early Start-up
-              </SideHeading>
-              <BodyText flexGrow="1">
-                {/* eslint-disable-next-line max-len */}
-                Jordan is a recent graduate and has had a few internships. Jordan is dabbling in personal and professional projects to help navigate what they want to do with their life.
-              </BodyText>
-            </VStack>
-          </HStack>
-          <SDivider
-            style={{ marginTop: '30px', marginBottom: '24px', width: '90%' }}
-          />
-          <HStack alignItems='start' gap='12px'>
-            <BodyCard title='Job to be done' bullets={[
-              'Gaining insight and inspiration for career / personal paths',
-              'Personal growth and learning new perspectives',
-              'Networking and building professional relationships'
-            ]} flex='3'/>
-            <BodyCard title='High-Level Goals' bullets={[
-              'Learning from others',
-              'Self-discovery',
-              'Collaboration'
-            ]} flex='2'/>
-          </HStack>
-        </SCard>
+        <MainCard />
 
         <VStack flex='1'>
           <SmallCard
@@ -171,10 +186,40 @@ const Problem: FC = () => {
         </VStack>
       </HStack>
 
+      <Spacer h='32px' />
+
       <SectionHeading>
         This helped us refine our design process to consider:
       </SectionHeading>
-    </>
+
+      <HStack alignItems='stretch' pt='12px'>
+        {
+          [
+            'Ease of adjusting CTAs and site versions depending on event timeline',
+            'UX/UI interviews and stakeholder analysis to help prioritize content',
+            'Relaying research discoveries to support branding team',
+            'Designing for scalability while considering scope of developer',
+            'User testing, prototyping, and revisions in-line with target users'
+          ].map((consideration, index) => (
+            <SCard key={consideration} flex='1' textAlign='center' p='12px' alignItems='center'>
+              <Box w='fit-content' position='relative'>
+                <Image src={bulletImg} h='40px' mb='8px'/>
+                <SideHeading style={{
+                  position: 'absolute',
+                  top: '40%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  color: '#000'
+                }}>
+                  {index + 1}
+                </SideHeading>
+              </Box>
+              <BodyText>{consideration}</BodyText>
+            </SCard>
+          ))
+        }
+      </HStack>
+    </Box>
   );
 };
 
