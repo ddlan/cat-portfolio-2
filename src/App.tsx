@@ -1,4 +1,4 @@
-import '@fontsource/nunito/300.css';
+import '@fontsource/nunito';
 
 import { Box, ChakraProvider, ColorModeProvider } from '@chakra-ui/react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

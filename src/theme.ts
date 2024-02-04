@@ -1,4 +1,4 @@
-import '@fontsource/nunito/300.css';
+import '@fontsource/nunito';
 import { extendTheme, theme as baseTheme } from '@chakra-ui/react';
 
 const colors = {
