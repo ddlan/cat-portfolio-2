@@ -5,14 +5,13 @@ import { Title } from '../../styles/components';
 
 interface TProps {
   title: string
-  icon?: string
+  icon?: JSX.Element
 }
 
-const SectionTitle: FC<TProps> = ({ title }) => {
-  console.log(typeof folder);
+const SectionTitle: FC<TProps> = ({ title, icon }) => {
   return (
     <HStack mb='20px' alignItems='center' gap='12px'>
-        <Image src={folder} width='36px' mb='10px' />
+        {icon ?? <Image src={icon ?? folder} width='36px' mb='10px' />}
         <Title> {title}</Title>
     </HStack>
   );

@@ -25,7 +25,7 @@ const technovaMotion = {
   rest: {
     background:
       '-webkit-radial-gradient(circle, #ffffffa0, #ffffff20)',
-    '-webkitBackgroundClip': 'text',
+    WebkitBackgroundClip: 'text',
     WebkitTextStroke: '1.5px #907CFF00',
     color: 'rgb(23, 23, 23)',
 

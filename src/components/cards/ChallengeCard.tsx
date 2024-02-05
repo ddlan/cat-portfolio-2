@@ -25,8 +25,8 @@ const challengeMotion = {
   rest: {
     background:
       '-webkit-radial-gradient(circle, #ffffffa0, #ffffff20)',
-    '-webkitBackgroundClip': 'text',
-    '-webkit-text-stroke': '1.5px transparent',
+    WebkitBackgroundClip: 'text',
+    WebkitTextStroke: '1.5px transparent',
     color: 'rgb(23, 23, 23)',
 
     ease: 'easeOut',

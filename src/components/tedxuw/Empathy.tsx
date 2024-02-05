@@ -144,14 +144,13 @@ const Empathy: FC = () => {
                   <Td>
                     <UnorderedList>
                       {row.notes.map(note => (
-                        <>
-                        <ListItem key={JSON.stringify(note.point)}>{note.point}</ListItem>
+                        <Box key={JSON.stringify(note.point)}>
+                          <ListItem >{note.point}</ListItem>
                           {'subpoints' in note && note.subpoints?.map(subpoint => (
                             <ListItem key={subpoint} ml='16px'>{subpoint}</ListItem>
                           ))
-
                           }
-                        </>
+                        </Box>
                       ))}
                     </UnorderedList>
                   </Td>
