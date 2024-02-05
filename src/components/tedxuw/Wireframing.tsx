@@ -4,23 +4,21 @@ import {
   Image
 } from '@chakra-ui/react';
 
-import folder from '../../images/folder.svg';
 import schedule1 from '../../images/schedule1.png';
 import schedule2 from '../../images/schedule2.png';
 import tedxuwFinal from '../../images/tedxuw-final.png';
 import {
   SCard, BodyText,
-  SectionHeading, Title
+  SectionHeading
 } from '../../styles/components';
 import '../../styles/styles.css';
+
+import SectionTitle from '../shared/SectionTitle';
 
 const Wireframing: FC = () => {
   return (
     <Box alignItems='start'>
-      <HStack mb='20px' alignItems='center' gap='12px'>
-        <Image src={folder} width='36px' mb='10px' />
-        <Title> Wireframing</Title>
-      </HStack>
+      <SectionTitle title='Wireframing' />
 
       <SectionHeading mb='20px'>First Iteration</SectionHeading>
       <BodyText>

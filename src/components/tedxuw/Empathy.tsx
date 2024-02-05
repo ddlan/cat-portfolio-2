@@ -14,14 +14,14 @@ import {
 } from '@chakra-ui/react';
 import styled from 'styled-components';
 
-import folder from '../../images/folder.svg';
 import userflow from '../../images/userflow.png';
 import userflow2 from '../../images/userflow2.png';
 import {
   SCard, BodyText,
-  Pink, SectionHeading, Title
+  Pink, SectionHeading
 } from '../../styles/components';
 import '../../styles/styles.css';
+import SectionTitle from '../shared/SectionTitle';
 
 const data: Array<{
   type: string
@@ -111,10 +111,7 @@ const TagColors = {
 const Empathy: FC = () => {
   return (
     <Box alignItems='start'>
-      <HStack mb='20px' alignItems='center' gap='12px'>
-        <Image src={folder} width='36px' mb='10px' />
-        <Title> Empathy Through Research</Title>
-      </HStack>
+      <SectionTitle title='Empathy through research' />
 
       <SectionHeading mb='20px'>Audit Summary</SectionHeading>
       <BodyText>

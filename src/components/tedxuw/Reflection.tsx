@@ -1,15 +1,14 @@
 import React, { type FC } from 'react';
 import {
-  Box, HStack, VStack,
-  Image
+  Box, VStack
 } from '@chakra-ui/react';
 
-import folder from '../../images/folder.svg';
 import {
   SCard, BodyText,
-  SectionHeading, Title, SideHeading
+  SectionHeading, SideHeading
 } from '../../styles/components';
 import '../../styles/styles.css';
+import SectionTitle from '../shared/SectionTitle';
 
 interface TLessonCardProps {
   title: string
@@ -26,10 +25,7 @@ const LessonCard: FC<TLessonCardProps> = ({ title, body }) => (
 const Reflection: FC = () => {
   return (
     <Box alignItems='start'>
-      <HStack mb='20px' alignItems='center' gap='12px'>
-        <Image src={folder} width='36px' mb='10px' />
-        <Title> Reflection and Takeaways</Title>
-      </HStack>
+      <SectionTitle title='Reflection and Takeaways' />
 
       <BodyText my='32px'>
         {/* eslint-disable-next-line max-len */}

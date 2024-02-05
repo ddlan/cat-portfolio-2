@@ -1,22 +1,19 @@
 import React, { type FC } from 'react';
 import {
-  Box, Button, HStack,
-  Image
+  Box, Button
 } from '@chakra-ui/react';
 
-import folder from '../../images/folder.svg';
 import {
-  BodyText, Title
+  BodyText
 } from '../../styles/components';
 import '../../styles/styles.css';
+
+import SectionTitle from '../shared/SectionTitle';
 
 const WIP: FC = () => {
   return (
     <Box alignItems='start'>
-      <HStack mb='20px' alignItems='center' gap='12px'>
-        <Image src={folder} width='36px' mb='10px' />
-        <Title> This Case Study is a Work in Progress</Title>
-      </HStack>
+      <SectionTitle title='This Case Study is a Work in Progress' />
 
       <BodyText my='32px'>
         {/* eslint-disable-next-line max-len */}

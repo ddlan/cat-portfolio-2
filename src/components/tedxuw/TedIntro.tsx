@@ -3,7 +3,7 @@ import {
   Pink
 } from '../../styles/components';
 import '../../styles/styles.css';
-import Intro from '../Intro';
+import Intro from '../shared/Intro';
 
 const TedIntro: FC = () => {
   return (

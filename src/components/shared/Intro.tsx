@@ -7,8 +7,8 @@ import {
 import {
   Title, SideHeading,
   BodyText
-} from '../styles/components';
-import '../styles/styles.css';
+} from '../../styles/components';
+import '../../styles/styles.css';
 
 interface TIntroProps {
   title: string

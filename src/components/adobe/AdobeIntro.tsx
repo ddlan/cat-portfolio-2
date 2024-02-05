@@ -1,9 +1,9 @@
 import React, { type FC } from 'react';
 import {
-  Pink
+  Orange
 } from '../../styles/components';
 import '../../styles/styles.css';
-import Intro from '../Intro';
+import Intro from '../shared/Intro';
 
 const AdobeIntro: FC = () => {
   return (
@@ -31,7 +31,7 @@ const AdobeIntro: FC = () => {
       body={
         <>
           {/* eslint-disable-next-line max-len */}
-          Originally, I was a Program Manager intern on the Adobe Digital Experience (DX) Credentialing team. My primary objective was to house projects to increase and retain the number of accredited individuals. However, after conducting user research, I identified an opportunity for our program to vastly surpass our target KPIs.
+          Originally, I was a Program Manager intern on the Adobe Digital Experience (DX) Credentialing team. My primary objective was to house projects to increase and retain the number of accredited individuals. <Orange>However, after conducting user research, I identified an opportunity for our program to vastly surpass our target KPIs.</Orange>
           <br /><br />
           {/* eslint-disable-next-line max-len */}
           While we had credentialing programs, we did not offer training nor continuous learning, which was of high-demand from our users.

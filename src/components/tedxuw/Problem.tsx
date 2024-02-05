@@ -8,13 +8,14 @@ import {
 import styled from 'styled-components';
 
 import bulletImg from '../../images/bullet.svg';
-import folder from '../../images/folder.svg';
 import jordan from '../../images/jordan.png';
 import {
   SCard, SDivider, SideHeading, BodyText,
-  Pink, SectionHeading, Title
+  Pink, SectionHeading
 } from '../../styles/components';
 import '../../styles/styles.css';
+
+import SectionTitle from '../shared/SectionTitle';
 
 const CTACard = styled(SCard).attrs({
   p: '20px',
@@ -111,10 +112,7 @@ const MainCard: FC = () => {
 const Problem: FC = () => {
   return (
     <Box alignItems='start'>
-      <HStack mb='20px' alignItems='center' gap='12px'>
-        <Image src={folder} width='36px' mb='10px' />
-        <Title> The Problem</Title>
-      </HStack>
+      <SectionTitle title='The Problem' />
       <HStack alignItems='start' gap='20px'>
         <VStack alignItems='start' flex='1'>
           <SectionHeading>
