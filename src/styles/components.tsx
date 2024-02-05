@@ -1,4 +1,4 @@
-import { Heading, Text, Card, Divider } from '@chakra-ui/react';
+import { Heading, Image, Text, Card, Divider } from '@chakra-ui/react';
 import styled from 'styled-components';
 
 export const SCard = styled(Card).attrs({
@@ -29,6 +29,9 @@ export const SectionHeading = styled(Heading).attrs({
   color: '#fff',
   mb: '8px'
 })``;
+export const SmallHeading = styled(SectionHeading).attrs({
+  fontSize: '24px'
+})``;
 export const BodyText = styled(Text).attrs({
   lineHeight: '26px'
 })``;
@@ -38,3 +41,10 @@ export const Pink = styled.span`
 export const Orange = styled.span`
   color: #FFA37C
 `;
+export const WideImage = styled(Image).attrs({
+  width: '90vw',
+  maxWidth: '90vw',
+  position: 'relative',
+  left: '50%',
+  transform: 'translate(-50%, 0)'
+})``;

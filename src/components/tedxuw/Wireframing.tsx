@@ -9,7 +9,7 @@ import schedule2 from '../../images/schedule2.png';
 import tedxuwFinal from '../../images/tedxuw-final.png';
 import {
   SCard, BodyText,
-  SectionHeading
+  SectionHeading, WideImage
 } from '../../styles/components';
 import '../../styles/styles.css';
 
@@ -64,9 +64,7 @@ const Wireframing: FC = () => {
         The interactable desktop designs are as follows:
       </BodyText>
 
-      <Image src={tedxuwFinal} mt='32px' width='90vw' maxWidth='90vw'
-        position='relative' left='50%' transform='translate(-50%, 0)'
-      />
+      <WideImage src={tedxuwFinal} />
     </Box>
   );
 };

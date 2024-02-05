@@ -9,6 +9,7 @@ import {
 import '../../styles/styles.css';
 
 import SectionTitle from '../shared/SectionTitle';
+import BackToTop from '../shared/BackToTop';
 
 const WIP: FC = () => {
   return (
@@ -23,9 +24,7 @@ const WIP: FC = () => {
         In the meantime, you can check out my other work such as my Adobe case study or the 12-Week Design Challenge.
       </BodyText>
 
-      <Button onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-        Back to Top ↑
-        </Button>
+      <BackToTop />
     </Box>
   );
 };

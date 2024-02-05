@@ -4,6 +4,8 @@ import {
 } from '../../styles/components';
 import '../../styles/styles.css';
 import Intro from '../shared/Intro';
+import { Button } from '@chakra-ui/react';
+import { LINKEDIN } from '../../constants';
 
 const AdobeIntro: FC = () => {
   return (
@@ -42,14 +44,8 @@ const AdobeIntro: FC = () => {
         </>
       }
       buttons={[
-        {
-          name: 'Skip to Takeaways ↓',
-          onClick: () => {}
-        },
-        {
-          name: 'Reach Out On LinkedIn ↗',
-          onClick: () => {}
-        }
+        <Button key='a'>Skip to Takeaways ↓</Button>,
+        <Button as='a' key='b' href={LINKEDIN} target='_blank'>Reach Out On LinkedIn ↗</Button>
       ]}
     />
   );

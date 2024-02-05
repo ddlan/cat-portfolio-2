@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 import {
-  Box, Button, Heading, HStack,
+  Box, Heading, HStack,
   Text, VStack
 } from '@chakra-ui/react';
 
@@ -15,7 +15,7 @@ interface TIntroProps {
   subtitle: string
   sideSections: Array<{ title: string, items: string[] }>
   body: JSX.Element
-  buttons: Array<{ name: string, onClick: () => void }>
+  buttons: JSX.Element[]
 }
 
 const Intro: FC<TIntroProps> = ({ title, subtitle, sideSections, body, buttons }) => {
@@ -39,9 +39,7 @@ const Intro: FC<TIntroProps> = ({ title, subtitle, sideSections, body, buttons }
         <VStack alignItems='start' gap='0.25rem' flex='3' mt='32px'>
           <BodyText>{body}</BodyText>
           <HStack>
-            {buttons.map(button => (
-              <Button key={button.name} onClick={button.onClick}>{button.name}</Button>
-            ))}
+            {buttons}
           </HStack>
         </VStack>
       </HStack>

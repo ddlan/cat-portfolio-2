@@ -4,23 +4,12 @@ import {
 } from '@chakra-ui/react';
 
 import {
-  SCard, BodyText,
-  SectionHeading, SideHeading
+  BodyText,
+  SectionHeading
 } from '../../styles/components';
 import '../../styles/styles.css';
 import SectionTitle from '../shared/SectionTitle';
-
-interface TLessonCardProps {
-  title: string
-  body: string
-}
-
-const LessonCard: FC<TLessonCardProps> = ({ title, body }) => (
-  <SCard p='20px'>
-    <SideHeading style={{ color: '#fff' }}>{title}</SideHeading>
-    <BodyText style={{ color: '#ffffffbf' }}>{body}</BodyText>
-  </SCard>
-);
+import LessonCard from '../shared/LessonCard';
 
 const Reflection: FC = () => {
   return (

@@ -4,6 +4,7 @@ import {
 } from '../../styles/components';
 import '../../styles/styles.css';
 import Intro from '../shared/Intro';
+import { Button } from '@chakra-ui/react';
 
 const TedIntro: FC = () => {
   return (
@@ -41,14 +42,8 @@ const TedIntro: FC = () => {
         </>
       }
       buttons={[
-        {
-          name: 'Read WIP Case Study',
-          onClick: () => {}
-        },
-        {
-          name: 'Live Website',
-          onClick: () => {}
-        }
+        <Button key='a'>Read WIP Case Study</Button>,
+        <Button as='a' key='b'>Live Website</Button>
       ]}
     />
   );
