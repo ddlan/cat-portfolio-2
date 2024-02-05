@@ -65,7 +65,7 @@ const otherTextMotion = {
 
 const ChallengeCard: FC = () => {
   return (
-    <Link to='challenge'>
+    <Link to='challenge' className="text">
       <motion.div
         className="text"
         initial="rest"

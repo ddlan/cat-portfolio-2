@@ -2,7 +2,8 @@ import React, { type FC } from 'react';
 import { motion } from 'framer-motion';
 
 import codeblock from '../../images/codeblock.png';
-import '../../styles/styles.css'; ;
+import '../../styles/styles.css'; import { Link } from 'react-router-dom';
+;
 
 const elementMotion = {
   rest: {
@@ -62,42 +63,44 @@ const otherTextMotion = {
 
 const TechNovaCard: FC = () => {
   return (
-    <motion.div
-      className="text"
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-      style={{ display: 'flex', overflow: 'hidden' }}
-    >
-      <>
-        <motion.img
-        src={codeblock}
-        alt='code block'
-        width='360px'
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          minWidth: '360px'
-        }}
-        variants={elementMotion}
-      />
-      </>
+    <Link to='technova' className="text">
+      <motion.div
+        className="text"
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+        style={{ display: 'flex', overflow: 'hidden' }}
+      >
+        <>
+          <motion.img
+          src={codeblock}
+          alt='code block'
+          width='360px'
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            minWidth: '360px'
+          }}
+          variants={elementMotion}
+        />
+        </>
 
-      <motion.div
-        className="card-title challenge"
-        variants={technovaMotion}
-      >
-        TechNova
+        <motion.div
+          className="card-title challenge"
+          variants={technovaMotion}
+        >
+          TechNova
+        </motion.div>
+        <motion.div
+          className="ted-text-platform"
+          variants={otherTextMotion}
+        >
+          Visual / Web
+        </motion.div>
       </motion.div>
-      <motion.div
-        className="ted-text-platform"
-        variants={otherTextMotion}
-      >
-        Visual / Web
-      </motion.div>
-    </motion.div>
+    </Link>
   );
 };
 

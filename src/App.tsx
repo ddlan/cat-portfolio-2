@@ -1,8 +1,8 @@
 import '@fontsource/nunito';
 
 import { Box, ChakraProvider, ColorModeProvider } from '@chakra-ui/react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import React, { type FC } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import React, { useEffect, type FC } from 'react';
 
 import './styles/styles.css';
 import Homepage from './pages/Homepage';
@@ -10,10 +10,22 @@ import TedxUW from './pages/TedxUW';
 import { customTheme } from './theme';
 import Adobe from './pages/Adobe';
 import Challenge from './pages/Challenge';
+import TechNova from './pages/TechNova';
+
+const ScrollToTop: FC = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App: FC = () =>
   (
     <BrowserRouter>
+      <ScrollToTop />
       <ChakraProvider theme={customTheme}>
       <ColorModeProvider>
         <Box className="App">
@@ -23,6 +35,7 @@ const App: FC = () =>
             <Route path="/tedxuw" element={<TedxUW/> } />
             <Route path="/adobe" element={<Adobe/> } />
             <Route path="/challenge" element={<Challenge/> } />
+            <Route path="/technova" element={<TechNova/> } />
           </Routes>
         </Box>
         </ColorModeProvider>
