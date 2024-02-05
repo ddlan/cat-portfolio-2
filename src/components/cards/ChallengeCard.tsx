@@ -1,8 +1,11 @@
 import React, { type FC } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import selector from '../../images/selector.svg';
-import '../../styles/styles.css'; ;
+import '../../styles/styles.css';
+
+;
 
 const elementMotion = {
   rest: {
@@ -62,43 +65,45 @@ const otherTextMotion = {
 
 const ChallengeCard: FC = () => {
   return (
-    <motion.div
-      className="text"
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-      style={{ display: 'flex', overflow: 'hidden' }}
-    >
-      <>
-        <motion.img
-        src={selector}
-        alt='figma selector'
-        width='360px'
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          minWidth: '360px'
-        }}
-        variants={elementMotion}
-      />
-      </>
+    <Link to='challenge'>
+      <motion.div
+        className="text"
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+        style={{ display: 'flex', overflow: 'hidden' }}
+      >
+        <>
+          <motion.img
+          src={selector}
+          alt='figma selector'
+          width='360px'
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            minWidth: '360px'
+          }}
+          variants={elementMotion}
+        />
+        </>
 
-      <motion.div
-        className="card-title challenge"
-        variants={challengeMotion}
-      // eslint-disable-next-line react/jsx-no-comment-textnodes
-      >
-        // CHALLENGE
+        <motion.div
+          className="card-title challenge"
+          variants={challengeMotion}
+        // eslint-disable-next-line react/jsx-no-comment-textnodes
+        >
+          // CHALLENGE
+        </motion.div>
+        <motion.div
+          className="ted-text-platform"
+          variants={otherTextMotion}
+        >
+          Redesign // UXR
+        </motion.div>
       </motion.div>
-      <motion.div
-        className="ted-text-platform"
-        variants={otherTextMotion}
-      >
-        Redesign // UXR
-      </motion.div>
-    </motion.div>
+    </Link>
   );
 };
 

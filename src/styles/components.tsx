@@ -41,6 +41,9 @@ export const Pink = styled.span`
 export const Orange = styled.span`
   color: #FFA37C
 `;
+export const Blue = styled.span`
+  color: #18A0FB
+`;
 export const WideImage = styled(Image).attrs({
   width: '90vw',
   maxWidth: '90vw',

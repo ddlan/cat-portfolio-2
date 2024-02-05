@@ -6,12 +6,13 @@ import { Title } from '../../styles/components';
 interface TProps {
   title: string
   icon?: string
+  hideIcon?: boolean
 }
 
-const SectionTitle: FC<TProps> = ({ title, icon }) => {
+const SectionTitle: FC<TProps> = ({ title, icon, hideIcon = false }) => {
   return (
     <HStack mb='20px' alignItems='center' gap='12px'>
-        <Image src={icon ?? folder} height='36px' mb='10px' />
+        {!hideIcon && <Image src={icon ?? folder} height='36px' mb='10px' />}
         <Title> {title}</Title>
     </HStack>
   );
