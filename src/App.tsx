@@ -8,6 +8,7 @@ import './styles/styles.css';
 import Homepage from './pages/Homepage';
 import TedxUW from './pages/TedxUW';
 import { customTheme } from './theme';
+import Adobe from './pages/Adobe';
 
 const App: FC = () =>
   (
@@ -19,6 +20,7 @@ const App: FC = () =>
             <Route path="/" element={<Homepage/> } />
             <Route path="/about" element={<Homepage/> } />
             <Route path="/tedxuw" element={<TedxUW/> } />
+            <Route path="/adobe" element={<Adobe/> } />
           </Routes>
         </Box>
         </ColorModeProvider>

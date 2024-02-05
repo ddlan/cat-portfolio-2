@@ -35,3 +35,6 @@ export const BodyText = styled(Text).attrs({
 export const Pink = styled.span`
   color: #F890BA
 `;
+export const Orange = styled.span`
+  color: #FFA37C
+`;

@@ -3,7 +3,8 @@ import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 import iphone13 from '../../images/iphone13.svg';
-import '../../styles/styles.css'; ;
+import '../../styles/styles.css'; import { Link } from 'react-router-dom';
+;
 
 const phoneMotion = {
   rest: {
@@ -59,39 +60,41 @@ const otherTextMotion = {
 
 const AdobeCard: FC = () => {
   return (
-    <motion.div
-      className="text"
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-      style={{ display: 'flex', overflow: 'hidden' }}
-    >
-    <motion.img
-      src={iphone13}
-      alt='iphone13'
-      width='275px'
-      style={{
-        position: 'absolute',
-        top: '58%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        minWidth: '275px'
-      }}
-      variants={phoneMotion}
-    />
-    <motion.div
-      className="card-title adobe"
-      variants={adobeMotion}
-    >
-      Adobe
+    <Link to='adobe' className="text">
+      <motion.div
+        className="text"
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+        style={{ display: 'flex', overflow: 'hidden' }}
+      >
+      <motion.img
+        src={iphone13}
+        alt='iphone13'
+        width='275px'
+        style={{
+          position: 'absolute',
+          top: '58%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          minWidth: '275px'
+        }}
+        variants={phoneMotion}
+      />
+      <motion.div
+        className="card-title adobe"
+        variants={adobeMotion}
+      >
+        Adobe
+      </motion.div>
+      <motion.div
+        className="ted-text-platform"
+        variants={otherTextMotion}
+      >
+        Accessibility // SaaS
+      </motion.div>
     </motion.div>
-    <motion.div
-      className="ted-text-platform"
-      variants={otherTextMotion}
-    >
-      Accessibility // SaaS
-    </motion.div>
-  </motion.div>
+  </Link>
   );
 };
 
