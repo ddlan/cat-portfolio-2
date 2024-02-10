@@ -15,13 +15,9 @@ const Navbar: FC = () => {
         </HStack>
       </Link>
 
-      <Box className="nav">
-        <Box className="element">
-          <Box className="text-wrapper">Work</Box>
-        </Box>
-        <Box className="div-wrapper">
-          <Box className="text-wrapper">About</Box>
-        </Box>
+      <Box>
+        <Box>Work</Box>
+        <Box>About</Box>
      </Box>
 
     <ChakraLink >↪ Resume</ChakraLink>

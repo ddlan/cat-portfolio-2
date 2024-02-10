@@ -13,7 +13,8 @@ const colors = {
   background: {
     _light: baseTheme.colors.white,
     _dark: baseTheme.colors.black
-  }
+  },
+  black: '#000'
 };
 
 export const customTheme = extendTheme({

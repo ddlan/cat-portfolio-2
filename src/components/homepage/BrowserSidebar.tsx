@@ -1,7 +1,9 @@
 import React, { useState, type FC } from 'react';
 import {
-  HStack, Heading, Image, ListItem,
-  Text, UnorderedList, VStack
+  Box,
+  HStack, Heading, Image, Link,
+  Switch,
+  Text, VStack
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
@@ -9,8 +11,14 @@ import styled from 'styled-components';
 import cat from '../../images/sidebar-cat.png';
 import happyCat from '../../images/sidebar-happy-cat.png';
 import lock from '../../images/lock.svg';
+import folder from '../../images/folder.svg';
+import linkedin from '../../images/linkedin.svg';
+import twitter from '../../images/twitter.svg';
+import email from '../../images/email.svg';
+
 import { SDivider } from '../../styles/components';
 import '../../styles/styles.css';
+import { LINKEDIN } from '../../constants';
 
 const SFadingCircle = styled(motion.div)`
   border-radius: 100%;
@@ -18,6 +26,16 @@ const SFadingCircle = styled(motion.div)`
   height: 12px;
   border: 1px solid #404040;
   background-color: #404040;
+`;
+
+const SFooterCircle = styled(Link)`
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  background-color: #6b6b6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 interface TFadingCircleProps {
@@ -73,13 +91,37 @@ const BrowserSidebar: FC = () => {
           <Image className='cat-in-box' src={catIsHovered ? happyCat : cat} />
         </motion.div>
         <SDivider/>
-        <Heading as='h2' size='sm' color='#ffffffc0'>Lover of</Heading>
-        <UnorderedList>
-          <ListItem color='#ffffffc0'>Storytelling</ListItem>
-          <ListItem color='#ffffffc0'>Hidden Easter Eggs ;))</ListItem>
-          <ListItem color='#ffffffc0'>Multi-purpose products</ListItem>
-        </UnorderedList>
+        <HStack alignItems='start' width='100%'>
+          <Image src={folder} alt='folder icon' height='20px'/>
+          <Heading as='h2' size='sm' color='#ffffffc0'>Lover of</Heading>
+        </HStack>
+        <Box>
+          {['Storytelling', 'Hidden Easter Eggs ;))', 'Multi-purpose products'].map(item => (
+            <HStack key={item} mt='8px' height='24px'>
+              <div>
+                <Switch
+                  colorScheme='black' isChecked isDisabled
+                  border='1px solid #656565' borderRadius='full'
+                />
+              </div>
+              <Text color='#747474' fontSize='14px' lineHeight='16px'>{item}</Text>
+            </HStack>
+          ))}
+        </Box>
         <SDivider/>
+
+        {/* Footer */}
+        <HStack marginTop='auto' marginBottom='8px'>
+          <SFooterCircle href={LINKEDIN} target='_blank'>
+            <Image src={linkedin} alt='Linkedin icon'/>
+          </SFooterCircle>
+          <SFooterCircle>
+            <Image src={twitter} alt='Twitter icon'/>
+          </SFooterCircle>
+          <SFooterCircle href="mailto:catherinehoang44@gmail.com" target='_blank'>
+            <Image src={email} alt='Email icon'/>
+          </SFooterCircle>
+        </HStack>
     </VStack>
   );
 };
