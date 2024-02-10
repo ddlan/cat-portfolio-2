@@ -14,7 +14,7 @@ import Riding from '../components/challenge/Riding';
 const Challenge: FC = () => {
   return (
     <Box>
-      <Navbar />
+      <Navbar isWork={true} />
       <Box
         mt="100px"
         mx='20vw'

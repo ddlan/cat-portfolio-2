@@ -23,7 +23,7 @@ const TedxUW: FC = () => {
 
   return (
     <Box>
-      <Navbar />
+      <Navbar isWork={true} />
       <Box
         mt="100px"
         mx='20vw'

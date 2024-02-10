@@ -11,6 +11,7 @@ import { customTheme } from './theme';
 import Adobe from './pages/Adobe';
 import Challenge from './pages/Challenge';
 import TechNova from './pages/TechNova';
+import About from './pages/About';
 
 const ScrollToTop: FC = () => {
   const { pathname } = useLocation();
@@ -31,7 +32,7 @@ const App: FC = () =>
         <Box className="App">
           <Routes>
             <Route path="/" element={<Homepage/> } />
-            <Route path="/about" element={<Homepage/> } />
+            <Route path="/about" element={<About/> } />
             <Route path="/tedxuw" element={<TedxUW/> } />
             <Route path="/adobe" element={<Adobe/> } />
             <Route path="/challenge" element={<Challenge/> } />

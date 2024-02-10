@@ -109,3 +109,23 @@
   white-space: nowrap;
   padding-top: 2px;
 }
+
+.nav-border {
+  padding: 1px;
+  background: radial-gradient(ellipse at top, #999, #333);
+  border-radius: 24px;
+}
+
+.nav {
+  background: #1f1f1f;
+  padding: 8px 20px;
+  border-radius: 24px;
+}
+
+.non-nav-border {
+  padding: 1px;
+}
+
+.non-nav {
+  padding: 8px 20px;
+}
