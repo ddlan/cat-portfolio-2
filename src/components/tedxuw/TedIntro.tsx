@@ -6,7 +6,11 @@ import '../../styles/styles.css';
 import Intro from '../shared/Intro';
 import { Button } from '@chakra-ui/react';
 
-const TedIntro: FC = () => {
+interface TProps {
+  scrollToProblem: () => void
+}
+
+const TedIntro: FC<TProps> = ({ scrollToProblem }) => {
   return (
     <Intro
       title='TEDx Talk Waterloo'
@@ -42,8 +46,8 @@ const TedIntro: FC = () => {
         </>
       }
       buttons={[
-        <Button key='a'>Read WIP Case Study</Button>,
-        <Button as='a' key='b'>Live Website</Button>
+        <Button key='a' onClick={scrollToProblem}>Read WIP Case Study</Button>,
+        <Button as='a' key='b' href='https://tedxuw.com/' target='_blank'>Live Website</Button>
       ]}
     />
   );

@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { type Ref, type FC } from 'react';
 import { Box, HStack, Image } from '@chakra-ui/react';
 
 import {
@@ -13,13 +13,17 @@ import adobeMission from '../../images/adobe-mission.png';
 import LessonCard from '../shared/LessonCard';
 import SectionTitle from '../shared/SectionTitle';
 
-const Unforgettable: FC = () => {
+interface TProps {
+  takeawaysRef: Ref<HTMLDivElement>
+}
+
+const Unforgettable: FC<TProps> = ({ takeawaysRef }) => {
   return (
-    <Box>
+    <Box ref={takeawaysRef}>
       <SectionTitle title='Unforgettable Memories' icon={puzz3}/>
       <SmallHeading mt='32px' mb='16px'>My Takeaways</SmallHeading>
 
-      <HStack alignItems='stretch' gap='12px'>
+      <HStack alignItems='stretch' gap='12px' my='16px'>
         {[
           {
             title: '🔊️ UX Advocation',

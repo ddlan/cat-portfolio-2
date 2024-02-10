@@ -7,7 +7,11 @@ import Intro from '../shared/Intro';
 import { Button } from '@chakra-ui/react';
 import { LINKEDIN } from '../../constants';
 
-const AdobeIntro: FC = () => {
+interface TProps {
+  scrollToTakeaways: () => void
+}
+
+const AdobeIntro: FC<TProps> = ({ scrollToTakeaways }) => {
   return (
     <Intro
       title='Adobe Training and Certification Platform'
@@ -44,7 +48,7 @@ const AdobeIntro: FC = () => {
         </>
       }
       buttons={[
-        <Button key='a'>Skip to Takeaways ↓</Button>,
+        <Button key='a' onClick={scrollToTakeaways}>Skip to Takeaways ↓</Button>,
         <Button as='a' key='b' href={LINKEDIN} target='_blank'>Reach Out On LinkedIn ↗</Button>
       ]}
     />

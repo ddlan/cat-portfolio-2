@@ -44,6 +44,9 @@ export const Orange = styled.span`
 export const Blue = styled.span`
   color: #18A0FB
 `;
+export const Purple = styled.span`
+  color: #B9A2EA
+`;
 export const WideImage = styled(Image).attrs({
   width: '90vw',
   maxWidth: '90vw',

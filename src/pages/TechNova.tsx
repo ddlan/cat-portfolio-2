@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { useRef, type FC } from 'react';
 import {
   Box, Spacer
 } from '@chakra-ui/react';
@@ -14,6 +14,11 @@ import { WideImage } from '../styles/components';
 import WIP from '../components/technova/WIP';
 
 const TechNova: FC = () => {
+  const caseStudyRef = useRef<HTMLDivElement>(null);
+  const scrollToCaseStudy = (): void => {
+    caseStudyRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Box>
       <Navbar />
@@ -21,13 +26,13 @@ const TechNova: FC = () => {
         mt="100px"
         mx='20vw'
       >
-        <TechNovaIntro />
+        <TechNovaIntro scrollToCaseStudy={scrollToCaseStudy} />
         <Spacer height='200px' />
 
         <WideImage src={wics} />
         <Spacer height='200px' />
 
-        <WIP />
+        <WIP caseStudyRef={caseStudyRef} />
         <Spacer height='50px' />
 
         <BackToTop />

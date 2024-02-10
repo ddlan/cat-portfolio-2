@@ -1,13 +1,14 @@
 import React, { type FC } from 'react';
-import {
-  Blue,
-  SideHeading
-} from '../../styles/components';
 import '../../styles/styles.css';
 import Intro from '../shared/Intro';
 import { Button } from '@chakra-ui/react';
+import { Purple } from '../../styles/components';
 
-const TechNovaIntro: FC = () => {
+interface TProps {
+  scrollToCaseStudy: () => void
+}
+
+const TechNovaIntro: FC<TProps> = ({ scrollToCaseStudy }) => {
   return (
     <Intro
       title='TechNova: Women+ Hackathon Website'
@@ -36,12 +37,12 @@ const TechNovaIntro: FC = () => {
           TechNova is University of Waterloo’s Women+ in Tech Hackathon. TechNova’s mission is to create safe, inclusive and empowering spaces for women and non-binary individuals to start, grow and thrive in the technology industry.
           <br/><br/>
           {/* eslint-disable-next-line max-len */}
-          With that in mind, we wanted to create a site and designs that empower women+ in tech, following a galaxy theme to tell individuals to reach for the stars!
+          With that in mind, we wanted to create a site and designs that empower women+ in tech, following a galaxy theme to tell individuals to <Purple>reach for the stars</Purple>!
           <br/><br/>
         </>
       }
       buttons={[
-        <Button key='a'>View WIP Case Study ↓</Button>
+        <Button key='a' onClick={scrollToCaseStudy}>View WIP Case Study ↓</Button>
       ]}
     />
   );

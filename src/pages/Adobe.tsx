@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { useRef, type FC } from 'react';
 import {
   Box, Spacer
 } from '@chakra-ui/react';
@@ -15,6 +15,11 @@ import Unforgettable from '../components/adobe/Unforgettable';
 import BackToTop from '../components/shared/BackToTop';
 
 const Adobe: FC = () => {
+  const takeawaysRef = useRef<HTMLDivElement>(null);
+  const scrollToTakeaways = (): void => {
+    takeawaysRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Box>
       <Navbar />
@@ -22,7 +27,7 @@ const Adobe: FC = () => {
         mt="100px"
         mx='20vw'
       >
-        <AdobeIntro />
+        <AdobeIntro scrollToTakeaways={scrollToTakeaways} />
         <Spacer height='200px' />
 
         <WideImage src={adobeCloud} />
@@ -34,7 +39,7 @@ const Adobe: FC = () => {
         <Clicking />
         <Spacer height='200px' />
 
-        <Unforgettable />
+        <Unforgettable takeawaysRef={takeawaysRef} />
         <Spacer height='200px' />
 
         <BackToTop />

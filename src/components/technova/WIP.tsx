@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { type Ref, type FC } from 'react';
 import {
   BodyText
 } from '../../styles/components';
@@ -7,9 +7,13 @@ import { Box } from '@chakra-ui/react';
 import SectionTitle from '../shared/SectionTitle';
 import { Link } from 'react-router-dom';
 
-const WIP: FC = () => {
+interface TProps {
+  caseStudyRef: Ref<HTMLDivElement>
+}
+
+const WIP: FC<TProps> = ({ caseStudyRef }) => {
   return (
-    <Box>
+    <Box ref={caseStudyRef}>
       <SectionTitle title='⭐️ This Case Study is a Work in Progress' hideIcon={true} />
       <BodyText>
         {/* eslint-disable-next-line max-len */}

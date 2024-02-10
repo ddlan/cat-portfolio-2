@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { type Ref, type FC } from 'react';
 import {
   Box, HStack,
   Image, ListItem,
@@ -109,9 +109,13 @@ const MainCard: FC = () => {
   );
 };
 
-const Problem: FC = () => {
+interface TProps {
+  problemRef: Ref<HTMLDivElement>
+}
+
+const Problem: FC<TProps> = ({ problemRef }) => {
   return (
-    <Box alignItems='start'>
+    <Box alignItems='start' ref={problemRef}>
       <SectionTitle title='The Problem' />
       <HStack alignItems='start' gap='20px'>
         <VStack alignItems='start' flex='1'>
