@@ -25,7 +25,7 @@ const ScrollToTop: FC = () => {
 
 const App: FC = () =>
   (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <ChakraProvider theme={customTheme}>
       <ColorModeProvider>
