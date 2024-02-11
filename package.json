@@ -2,7 +2,7 @@
   "name": "cat-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.dannylan.me/cat-portfolio/",
+  "homepage": "https://www.ddlan.github.io/cat-portfolio",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
@@ -33,7 +33,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --cname CNAME"
   },
   "eslintConfig": {
     "extends": [
