@@ -1,8 +1,8 @@
 {
   "name": "cat-portfolio",
   "version": "0.1.0",
+  "homepage": "https://www.dannylan.me/cat-portfolio",
   "private": true,
-  "homepage": "https://dannylan.me/cat-portfolio",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
