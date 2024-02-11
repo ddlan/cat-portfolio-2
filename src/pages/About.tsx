@@ -8,17 +8,12 @@ import nodeEditor from '../images/node-editor.png';
 import mindMap from '../images/mind-map.png';
 
 import '../styles/styles.css';
-import { SCard } from '../styles/components';
+import { SCard, SGridCard } from '../styles/components';
 import { HEIGHT, MARGIN } from '../styles/constants';
 import Navbar from '../components/Navbar';
 import BrowserSidebar from '../components/homepage/BrowserSidebar';
 import styled from 'styled-components';
-
-const SGridCard = styled(SCard).attrs({
-  h: '100%',
-  w: '100%',
-  justifyContent: 'space-between'
-})``;
+import ChangeWorld from '../components/about/ChangeWorld';
 
 const About: FC = () => {
   return (
@@ -41,12 +36,7 @@ const About: FC = () => {
             templateColumns='repeat(3, 1fr)'
             gap='12px'
           >
-            <GridItem>
-              <SGridCard>
-                <Image src={changeWorld} />
-                <Text className='scard-caption'>How I Change The World</Text>
-              </SGridCard>
-            </GridItem>
+            <GridItem><ChangeWorld /></GridItem>
             <GridItem>
               <SGridCard>
                 <div style={{ height: '40px' }}/>

@@ -54,3 +54,8 @@ export const WideImage = styled(Image).attrs({
   left: '50%',
   transform: 'translate(-50%, 0)'
 })``;
+export const SGridCard = styled(SCard).attrs({
+  h: '100%',
+  w: '100%',
+  justifyContent: 'space-between'
+})``;
