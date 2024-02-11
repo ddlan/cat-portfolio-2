@@ -1,7 +1,6 @@
 import React, { type FC } from 'react';
 import { Box, Image, Grid, GridItem, HStack, Text, VStack, Container } from '@chakra-ui/react';
 
-import changeWorld from '../images/change-world.png';
 import computer from '../images/computer.svg';
 import pathsPhone from '../images/paths-phone.png';
 import nodeEditor from '../images/node-editor.png';
@@ -12,7 +11,6 @@ import { SCard, SGridCard } from '../styles/components';
 import { HEIGHT, MARGIN } from '../styles/constants';
 import Navbar from '../components/Navbar';
 import BrowserSidebar from '../components/homepage/BrowserSidebar';
-import styled from 'styled-components';
 import ChangeWorld from '../components/about/ChangeWorld';
 
 const About: FC = () => {
