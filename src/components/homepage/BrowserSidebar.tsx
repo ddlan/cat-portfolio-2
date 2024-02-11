@@ -59,11 +59,25 @@ const FadingCircle: FC<TFadingCircleProps> = ({
   />
 );
 
-const BrowserSidebar: FC = () => {
+interface TProps {
+  isWork: boolean
+}
+
+const BrowserSidebar: FC<TProps> = ({ isWork }) => {
   const [catIsHovered, setCatIsHovered] = useState(false);
 
+  const toggleSection = isWork
+    ? {
+        title: 'Lover of:',
+        bullets: ['Storytelling', 'Hidden Easter Eggs ;))', 'Multi-purpose products']
+      }
+    : {
+        title: 'Abilities:',
+        bullets: ['Data Storytelling', 'High-Agency', 'Community Builder']
+      };
+
   return (
-    <VStack w='250px' h='100%' pr='6px'>
+    <VStack w='250px' minW='205px' h='100%' pr='6px'>
       <HStack p='6px' mt='4px' width='100%'>
         <FadingCircle
           activeBgColor='#FF5F57'
@@ -93,10 +107,12 @@ const BrowserSidebar: FC = () => {
         <SDivider/>
         <HStack alignItems='start' width='100%'>
           <Image src={folder} alt='folder icon' height='20px'/>
-          <Heading as='h2' size='sm' color='#ffffffc0'>Lover of</Heading>
+          <Heading as='h2' size='sm' color='#ffffffc0' style={{ lineHeight: 'normal' }}>
+            Lover of
+            </Heading>
         </HStack>
         <Box>
-          {['Storytelling', 'Hidden Easter Eggs ;))', 'Multi-purpose products'].map(item => (
+          {toggleSection.bullets.map(item => (
             <HStack key={item} mt='8px' height='24px'>
               <div>
                 <Switch

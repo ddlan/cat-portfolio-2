@@ -129,3 +129,10 @@
 .non-nav {
   padding: 8px 20px;
 }
+
+.scard-caption {
+  text-align: end;
+  padding: 8px 12px;
+  color: #FFFFFF66;
+  font-style: italic;
+}

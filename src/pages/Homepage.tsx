@@ -20,12 +20,14 @@ const Homepage: FC = () => {
       <Navbar isWork={true} />
       <SCard
         h={`calc(100vh - ${HEIGHT.navbar} - ${MARGIN.homepageB})`}
+        minH='600px'
+        minW='800px'
         mx={MARGIN.homepageX}
         mb={MARGIN.homepageB}
         p='12px'
       >
         <HStack h='100%'>
-          <BrowserSidebar />
+          <BrowserSidebar isWork={true} />
           <Grid
             w='100%'
             h='100%'
