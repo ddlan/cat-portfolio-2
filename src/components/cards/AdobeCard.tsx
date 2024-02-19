@@ -1,8 +1,7 @@
 import React, { type FC } from 'react';
-import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-import iphone13 from '../../images/iphone13.svg';
+import iphone13 from '../../images/iphone13-full.png';
 import '../../styles/styles.css'; import { Link } from 'react-router-dom';
 ;
 
@@ -66,7 +65,10 @@ const AdobeCard: FC = () => {
         initial="rest"
         whileHover="hover"
         animate="rest"
-        style={{ display: 'flex', overflow: 'hidden' }}
+        style={{
+          display: 'flex',
+          overflow: 'scroll'
+        }}
       >
       <motion.img
         src={iphone13}
@@ -74,10 +76,10 @@ const AdobeCard: FC = () => {
         width='275px'
         style={{
           position: 'absolute',
-          top: '58%',
           left: '50%',
-          transform: 'translate(-50%, -50%)',
-          minWidth: '275px'
+          transform: 'translate(-50%, 30%)',
+          minWidth: '275px',
+          paddingBottom: '32px'
         }}
         variants={phoneMotion}
       />

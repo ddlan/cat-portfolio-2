@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 import {
-  Box, Button
+  Box
 } from '@chakra-ui/react';
 
 import {

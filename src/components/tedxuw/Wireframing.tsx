@@ -6,14 +6,14 @@ import {
 
 import schedule1 from '../../images/schedule1.png';
 import schedule2 from '../../images/schedule2.png';
-import tedxuwFinal from '../../images/tedxuw-final.png';
 import {
   SCard, BodyText,
-  SectionHeading, WideImage
+  SectionHeading
 } from '../../styles/components';
 import '../../styles/styles.css';
 
 import SectionTitle from '../shared/SectionTitle';
+import { PROTOTYPES } from '../../constants';
 
 const Wireframing: FC = () => {
   return (
@@ -57,14 +57,15 @@ const Wireframing: FC = () => {
       </HStack>
 
       <SectionHeading mt='64px' mb='20px'>Final Designs</SectionHeading>
-      <BodyText>
+      <BodyText mb='12px'>
         {/* eslint-disable-next-line max-len */}
         Next came the hi-fidelity and prototyping stage, where we would implement all of our branding and visual design within the structural logic of our wireframes based on our research, low-fidelity, and user-testing on our low-fidelity.
         <br /><br />
         The interactable desktop designs are as follows:
       </BodyText>
 
-      <WideImage src={tedxuwFinal} />
+      <iframe className='prototype' src={PROTOTYPES.tedxuw} allowFullScreen></iframe>
+
     </Box>
   );
 };
