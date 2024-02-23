@@ -59,3 +59,6 @@ export const SGridCard = styled(SCard).attrs({
   w: '100%',
   justifyContent: 'space-between'
 })``;
+export const PrototypeFrame = styled.iframe.attrs({
+  allowFullScreen: true
+})``;

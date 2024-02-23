@@ -1,17 +1,29 @@
 import React, { type FC } from 'react';
 import { Box, Image, Grid, GridItem, HStack, Text, VStack, Container } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 import computer from '../images/computer.svg';
 import pathsPhone from '../images/paths-phone.png';
 import nodeEditor from '../images/node-editor.png';
 import mindMap from '../images/mind-map.png';
+import toolbox from '../images/toolbox.png';
 
 import '../styles/styles.css';
-import { SCard, SGridCard } from '../styles/components';
+import { PrototypeFrame, SCard, SGridCard } from '../styles/components';
 import { HEIGHT, MARGIN } from '../styles/constants';
 import Navbar from '../components/Navbar';
 import BrowserSidebar from '../components/homepage/BrowserSidebar';
 import ChangeWorld from '../components/about/ChangeWorld';
+import { PROTOTYPES } from '../constants';
+
+const computerMotion = {
+  rest: {
+    opacity: '100%'
+  },
+  hover: {
+    opacity: '0'
+  }
+};
 
 const About: FC = () => {
   return (
@@ -38,14 +50,30 @@ const About: FC = () => {
             <GridItem>
               <SGridCard>
                 <div style={{ height: '40px' }}/>
-                <Image src={computer} px='24px'/>
+                <div>
+                  <motion.img
+                    src={computer}
+                    style={{ padding: '24px' }}
+                    initial="rest"
+                    whileHover="hover"
+                    variants={computerMotion}
+                  />
+                  <motion.img
+                    src={toolbox}
+                    className='centered'
+                    style={{ padding: '24px' }}
+                    initial="hover"
+                    whileHover="rest"
+                    variants={computerMotion}
+                  />
+                </div>
                 <Text className='scard-caption'>My Toolbox</Text>
               </SGridCard>
             </GridItem>
             <GridItem rowSpan={2}>
               <SGridCard>
                 <div style={{ height: '40px' }}/>
-                <Image src={pathsPhone} px='32px'/>
+                <PrototypeFrame src={PROTOTYPES.directory} style={{ height: '100%' }} />
                 <Text className='scard-caption'>Directory of Paths I&apos;ve Taken</Text>
               </SGridCard>
             </GridItem>

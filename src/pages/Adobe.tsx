@@ -9,10 +9,12 @@ import '../styles/styles.css';
 import Navbar from '../components/Navbar';
 import AdobeIntro from '../components/adobe/AdobeIntro';
 import Pieces from '../components/adobe/Pieces';
-import { WideImage } from '../styles/components';
+import { PrototypeFrame, WideImage } from '../styles/components';
 import Clicking from '../components/adobe/Clicking';
 import Unforgettable from '../components/adobe/Unforgettable';
 import BackToTop from '../components/shared/BackToTop';
+import { PROTOTYPES } from '../constants';
+import Choosing from '../components/adobe/Choosing';
 
 const Adobe: FC = () => {
   const takeawaysRef = useRef<HTMLDivElement>(null);
@@ -30,7 +32,10 @@ const Adobe: FC = () => {
         <AdobeIntro scrollToTakeaways={scrollToTakeaways} />
         <Spacer height='200px' />
 
-        <WideImage src={adobeCloud} />
+        <PrototypeFrame className='wide-prototype' src={PROTOTYPES.adobeCert} />
+        <Spacer height='200px' />
+
+        <Choosing />
         <Spacer height='200px' />
 
         <Pieces />

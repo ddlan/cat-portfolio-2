@@ -8,7 +8,8 @@ import schedule1 from '../../images/schedule1.png';
 import schedule2 from '../../images/schedule2.png';
 import {
   SCard, BodyText,
-  SectionHeading
+  SectionHeading,
+  PrototypeFrame
 } from '../../styles/components';
 import '../../styles/styles.css';
 
@@ -64,7 +65,7 @@ const Wireframing: FC = () => {
         The interactable desktop designs are as follows:
       </BodyText>
 
-      <iframe className='prototype' src={PROTOTYPES.tedxuw} allowFullScreen></iframe>
+      <PrototypeFrame className='wide-prototype' src={PROTOTYPES.tedxuw} />
 
     </Box>
   );

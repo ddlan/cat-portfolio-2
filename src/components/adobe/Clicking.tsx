@@ -8,7 +8,7 @@ import {
 } from '../../styles/components';
 import '../../styles/styles.css';
 
-import puzz1 from '../../images/puzz1.svg';
+import puzz2 from '../../images/puzz2.svg';
 
 import SectionTitle from '../shared/SectionTitle';
 import { LINKEDIN } from '../../constants';
@@ -16,7 +16,7 @@ import { LINKEDIN } from '../../constants';
 const Clicking: FC = () => {
   return (
     <Box>
-      <SectionTitle title='Clicking Into Place' icon={puzz1}/>
+      <SectionTitle title='Clicking Into Place' icon={puzz2}/>
       <SmallHeading mt='32px' mb='16px'>What&apos;s Next</SmallHeading>
       <BodyText>
         {/* eslint-disable-next-line max-len */}
