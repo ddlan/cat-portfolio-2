@@ -4,7 +4,6 @@ import { Box, HStack, Image, VStack } from '@chakra-ui/react';
 import {
   BodyText,
   Orange,
-  SCard,
   SectionHeading,
   SideHeading,
   SmallHeading

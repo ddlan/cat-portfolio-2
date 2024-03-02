@@ -1,5 +1,10 @@
 import '@fontsource/nunito';
-import { extendTheme, theme as baseTheme } from '@chakra-ui/react';
+import { extendTheme, theme as baseTheme, type ThemeConfig } from '@chakra-ui/react';
+
+const config: ThemeConfig = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false
+};
 
 const colors = {
   primaryFont: {
@@ -18,9 +23,7 @@ const colors = {
 };
 
 export const customTheme = extendTheme({
-  initialColorMode: 'dark',
-  useSystemColorMode: false,
-
+  config,
   colors,
 
   fonts: {

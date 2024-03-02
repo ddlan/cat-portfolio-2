@@ -1,6 +1,6 @@
 import '@fontsource/nunito';
 
-import { Box, ChakraProvider, ColorModeProvider } from '@chakra-ui/react';
+import { Box, ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import React, { useEffect, type FC } from 'react';
 
@@ -28,18 +28,16 @@ const App: FC = () =>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <ChakraProvider theme={customTheme}>
-      <ColorModeProvider>
-        <Box className="App">
-          <Routes>
-            <Route path="/" element={<Homepage/> } />
-            <Route path="/about" element={<About/> } />
-            <Route path="/tedxuw" element={<TedxUW/> } />
-            <Route path="/adobe" element={<Adobe/> } />
-            <Route path="/challenge" element={<Challenge/> } />
-            <Route path="/technova" element={<TechNova/> } />
-          </Routes>
-        </Box>
-        </ColorModeProvider>
+          <Box className="App">
+            <Routes>
+              <Route path="/" element={<Homepage/> } />
+              <Route path="/about" element={<About/> } />
+              <Route path="/tedxuw" element={<TedxUW/> } />
+              <Route path="/adobe" element={<Adobe/> } />
+              <Route path="/challenge" element={<Challenge/> } />
+              <Route path="/technova" element={<TechNova/> } />
+            </Routes>
+          </Box>
       </ChakraProvider>
     </BrowserRouter>
   );

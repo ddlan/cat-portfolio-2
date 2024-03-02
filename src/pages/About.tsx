@@ -3,7 +3,6 @@ import { Box, Image, Grid, GridItem, HStack, Text, VStack, Container } from '@ch
 import { motion } from 'framer-motion';
 
 import computer from '../images/computer.svg';
-import pathsPhone from '../images/paths-phone.png';
 import nodeEditor from '../images/node-editor.png';
 import mindMap from '../images/mind-map.png';
 import toolbox from '../images/toolbox.png';
