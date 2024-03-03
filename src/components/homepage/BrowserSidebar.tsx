@@ -18,7 +18,7 @@ import email from '../../images/email.svg';
 
 import { SDivider } from '../../styles/components';
 import '../../styles/styles.css';
-import { LINKEDIN } from '../../constants';
+import { LINKEDIN, TWITTER } from '../../constants';
 
 const SFadingCircle = styled(motion.div)`
   border-radius: 100%;
@@ -131,7 +131,7 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
           <SFooterCircle href={LINKEDIN} target='_blank'>
             <Image src={linkedin} alt='Linkedin icon'/>
           </SFooterCircle>
-          <SFooterCircle>
+          <SFooterCircle href={TWITTER} target='_blank'>
             <Image src={twitter} alt='Twitter icon'/>
           </SFooterCircle>
           <SFooterCircle href="mailto:catherinehoang44@gmail.com" target='_blank'>
