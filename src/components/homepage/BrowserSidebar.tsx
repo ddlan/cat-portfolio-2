@@ -117,7 +117,9 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
               <div>
                 <Switch
                   colorScheme='black'
-                  border='1px solid #656565' borderRadius='full'
+                  defaultChecked
+                  border='1px solid #656565'
+                  borderRadius='full'
                 />
               </div>
               <Text color='#747474' fontSize='14px' lineHeight='16px'>{item}</Text>
