@@ -1,4 +1,4 @@
-import React, { useState, type FC, useEffect, useRef } from 'react';
+import React, { useState, type FC, useEffect, useRef, useMemo } from 'react';
 import { Box } from '@chakra-ui/react';
 import { type Variants, motion } from 'framer-motion';
 
@@ -96,18 +96,15 @@ interface TSnowflake {
 }
 
 const Snowflake: FC<TSnowflake> = ({ type1, left, top, isHovered, gust }) => {
-  const xMovement = (Math.random() * 60) - 20 + gust;
+  const xMovement = useMemo(() => (Math.random() * 60) - 20, []);
 
   return (
     <motion.img
       src={type1 ? snowflake1 : snowflake2}
       style={{ height: '12px', width: '12px', left, top, position: 'absolute' }}
-      initial={{
-        opacity: 1
-      }}
       animate={{
         opacity: isHovered ? 1 : 0,
-        x: isHovered ? xMovement : 0,
+        x: isHovered ? xMovement + gust : 0,
         y: isHovered ? (type1 ? 200 : 100) : 0,
         transition: {
           duration: isHovered ? 20 : 0,
