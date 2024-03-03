@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import '../styles/styles.css';
 import '../styles/styleguide.css';
 import cat from '../images/Cat.png';
+import resume from '../res/cat-resume.pdf';
 
 interface TToggleBoxProps {
   name: string
@@ -58,7 +59,7 @@ const Navbar: FC<TNavbarProps> = ({ isWork }) => {
         />
      </HStack>
 
-    <ChakraLink >↪ Resumé</ChakraLink>
+    <ChakraLink href={resume}>↪ Resumé</ChakraLink>
     </HStack>
   );
 };
