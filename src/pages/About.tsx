@@ -2,7 +2,7 @@ import React, { type FC } from 'react';
 import { Box, Image, Grid, GridItem, HStack, Text, VStack, Container } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-import computer from '../images/computer.svg';
+import computer from '../images/computer.png';
 import nodeEditor from '../images/node-editor.png';
 import mindMap from '../images/mind-map.png';
 import toolbox from '../images/toolbox.png';
@@ -52,7 +52,8 @@ const About: FC = () => {
                 <div>
                   <motion.img
                     src={computer}
-                    style={{ padding: '24px' }}
+                    className='centered'
+                    style={{ padding: '24px', maxWidth: '320px' }}
                     initial="rest"
                     whileHover="hover"
                     variants={computerMotion}
@@ -60,7 +61,7 @@ const About: FC = () => {
                   <motion.img
                     src={toolbox}
                     className='centered'
-                    style={{ padding: '24px' }}
+                    style={{ padding: '24px', maxWidth: '320px' }}
                     initial="hover"
                     whileHover="rest"
                     variants={computerMotion}
@@ -84,8 +85,12 @@ const About: FC = () => {
                     justifyContent='space-between' maxW='100%' flex='1'
                   >
                     <div style={{ height: '30px' }}/>
-                    <Image src={mindMap} maxH='180px' position='absolute'
-                      height='100%' top='0'
+                    <Image
+                      src={mindMap}
+                      maxH='300px'
+                      position='absolute'
+                      height='100%'
+                      top='0'
                     />
                     <Container w='100%' justifyContent='end'>
                       <Text className='scard-caption'>Mind Map of My Interests</Text>

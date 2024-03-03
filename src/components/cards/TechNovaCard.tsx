@@ -2,6 +2,8 @@ import React, { type FC } from 'react';
 import { motion } from 'framer-motion';
 
 import codeblock from '../../images/codeblock.png';
+import ufo from '../../images/ufo.png';
+import telescope from '../../images/telescope.png';
 import '../../styles/styles.css'; import { Link } from 'react-router-dom';
 ;
 
@@ -21,6 +23,28 @@ const elementMotion = {
     }
   }
 };
+
+const getSlideMotion = (
+  { startX = 0, startY = 0 }: { startX?: number, startY?: number }
+) => ({
+  rest: {
+    duration: 0.2,
+    x: startX,
+    y: startY,
+    type: 'linear',
+    transition: {
+      x: { bounce: 0 }
+    }
+  },
+  hover: {
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      type: 'linear'
+    }
+  }
+});
 
 const technovaMotion = {
   rest: {
@@ -73,18 +97,38 @@ const TechNovaCard: FC = () => {
       >
         <>
           <motion.img
-          src={codeblock}
-          alt='code block'
-          width='360px'
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            minWidth: '360px'
-          }}
-          variants={elementMotion}
-        />
+            src={codeblock}
+            alt='code block'
+            width='360px'
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              minWidth: '360px'
+            }}
+            variants={elementMotion}
+          />
+          <motion.img
+            src={ufo}
+            width='130px'
+            style={{
+              position: 'absolute',
+              left: '11%',
+              top: 0
+            }}
+            variants={getSlideMotion({ startX: -30, startY: -100 })}
+          />
+          <motion.img
+            src={telescope}
+            width='130px'
+            style={{
+              position: 'absolute',
+              right: '5%',
+              bottom: 0
+            }}
+            variants={getSlideMotion({ startY: 88 })}
+          />
         </>
 
         <motion.div

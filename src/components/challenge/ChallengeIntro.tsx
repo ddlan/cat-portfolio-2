@@ -7,7 +7,11 @@ import '../../styles/styles.css';
 import Intro from '../shared/Intro';
 import { Button } from '@chakra-ui/react';
 
-const ChallengeIntro: FC = () => {
+interface TProps {
+  scrollToDesign: () => void
+}
+
+const ChallengeIntro: FC<TProps> = ({ scrollToDesign }) => {
   return (
     <Intro
       title='Collaborative Design Incubator'
@@ -52,7 +56,7 @@ const ChallengeIntro: FC = () => {
         </>
       }
       buttons={[
-        <Button key='a'>Check out Featured Designs ↓</Button>
+        <Button key='a' onClick={scrollToDesign}>Check out Featured Designs ↓</Button>
       ]}
     />
   );

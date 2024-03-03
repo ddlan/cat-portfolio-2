@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { useRef, type FC } from 'react';
 import {
   Box, Spacer
 } from '@chakra-ui/react';
@@ -14,6 +14,11 @@ import { PrototypeFrame } from '../styles/components';
 import { PROTOTYPES } from '../constants';
 
 const Challenge: FC = () => {
+  const designRef = useRef<HTMLIFrameElement>(null);
+  const scrollToDesign = (): void => {
+    designRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Box>
       <Navbar isWork={true} />
@@ -21,10 +26,14 @@ const Challenge: FC = () => {
         mt="100px"
         mx='20vw'
       >
-        <ChallengeIntro />
+        <ChallengeIntro scrollToDesign={scrollToDesign} />
         <Spacer height='200px' />
 
-        <PrototypeFrame className='wide-prototype' src={PROTOTYPES.designChallenge} />
+        <PrototypeFrame
+          ref={designRef}
+          className='wide-prototype'
+          src={PROTOTYPES.designChallenge}
+        />
         <Spacer height='200px' />
 
         <Difficult />

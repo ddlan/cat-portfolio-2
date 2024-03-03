@@ -49,7 +49,7 @@ const ChangeWorld: FC = () => {
               </VStack>
               )
             : (
-              <Image src={changeWorld} maxW='80%' />
+              <Image src={changeWorld} maxW='85%' m='-12px' />
               )
           }
            <SIconButton
