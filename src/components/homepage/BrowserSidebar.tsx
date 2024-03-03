@@ -116,7 +116,7 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
             <HStack key={item} mt='8px' height='24px'>
               <div>
                 <Switch
-                  colorScheme='black' isChecked isDisabled
+                  colorScheme='black'
                   border='1px solid #656565' borderRadius='full'
                 />
               </div>

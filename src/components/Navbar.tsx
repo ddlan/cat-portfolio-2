@@ -58,7 +58,7 @@ const Navbar: FC<TNavbarProps> = ({ isWork }) => {
         />
      </HStack>
 
-    <ChakraLink >↪ Resume</ChakraLink>
+    <ChakraLink >↪ Resumé</ChakraLink>
     </HStack>
   );
 };

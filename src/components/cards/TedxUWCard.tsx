@@ -1,20 +1,24 @@
-import React, { useState, type FC, useEffect } from 'react';
+import React, { useState, type FC, useEffect, useRef } from 'react';
 import { Box } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { type Variants, motion } from 'framer-motion';
 
-import tedGroundWindmill from '../../images/ted-ground-windmill.svg';
+import tedGround from '../../images/ted-ground.svg';
+import windmill from '../../images/windmill.svg';
 import snowflake1 from '../../images/snowflake1.svg';
 import snowflake2 from '../../images/snowflake2.svg';
 import '../../styles/styles.css';
 import { Link } from 'react-router-dom';
+import { useResize } from '../../util/useResize';
 
 const groundMotion = {
   rest: {
     opacity: 0,
-    ease: 'easeOut',
-    duration: 0.2,
-    type: 'tween',
-    marginBottom: '-6%'
+    marginBottom: '-6%',
+    transition: {
+      ease: 'easeOut',
+      duration: 0.2,
+      type: 'tween'
+    }
   },
   hover: {
     opacity: 1,
@@ -27,13 +31,31 @@ const groundMotion = {
   }
 };
 
-const tedxMotion = {
+const windmillMotion: Variants = {
+  ...groundMotion,
+  hover: {
+    ...groundMotion.hover,
+    rotate: 360,
+    transition: {
+      ...groundMotion.hover.transition,
+      rotate: {
+        duration: 6,
+        repeat: Infinity,
+        ease: 'linear'
+      }
+    }
+  }
+};
+
+const tedxMotion: Variants = {
   rest: {
     color: 'var(--transparent)',
     WebkitTextStroke: '0.85px #ffffff66',
-    ease: 'easeOut',
-    duration: 0.2,
-    type: 'tween'
+    transition: {
+      ease: 'easeOut',
+      duration: 0.2,
+      type: 'tween'
+    }
   },
   hover: {
     color: 'var(--ted-red)',
@@ -46,12 +68,14 @@ const tedxMotion = {
   }
 };
 
-const otherTextMotion = {
+const otherTextMotion: Variants = {
   rest: {
     color: 'var(--variable-collection-mid-light)',
-    ease: 'easeOut',
-    duration: 0.2,
-    type: 'tween'
+    transition: {
+      ease: 'easeOut',
+      duration: 0.2,
+      type: 'tween'
+    }
   },
   hover: {
     color: 'var(--white)',
@@ -97,6 +121,9 @@ const Snowflake: FC<TSnowflake> = ({ type1, left, top, isHovered, gust }) => {
 };
 
 const TedxUWCard: FC = () => {
+  const imageRef = useRef<HTMLImageElement>(null);
+  const { width } = useResize(imageRef);
+
   const [isHovered, setIsHovered] = useState(false);
   const [gustNum, setGustNum] = useState(0);
 
@@ -151,8 +178,9 @@ const TedxUWCard: FC = () => {
         onMouseLeave={() => { setIsHovered(false); }}
       >
       <motion.img
-        src={tedGroundWindmill}
-        alt='ground with windmill'
+        ref={imageRef}
+        src={tedGround}
+        alt='ground'
         width='100%'
         style={{
           position: 'absolute',
@@ -161,6 +189,18 @@ const TedxUWCard: FC = () => {
           minWidth: '350px'
         }}
         variants={groundMotion}
+      />
+      <motion.img
+        src={windmill}
+        alt='windmill'
+        style={{
+          position: 'absolute',
+          bottom: `${width * 0.152}px`,
+          left: '15.78%',
+          width: `${width / 8}px`,
+          transform: 'translate(-50%, 0)'
+        }}
+        variants={windmillMotion}
       />
       {renderSnowflakes()}
       <Box className="ted-title-container">
