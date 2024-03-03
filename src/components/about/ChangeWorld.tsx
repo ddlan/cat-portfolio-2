@@ -10,9 +10,9 @@ import styled from 'styled-components';
 
 const SIconButton = styled(IconButton).attrs({
   isRound: true,
-  w: '16px',
-  minW: '16px',
-  h: '16px'
+  w: '24px',
+  minW: '24px',
+  h: '24px'
 
 })`
   border-radius: 100%;
@@ -49,7 +49,7 @@ const ChangeWorld: FC = () => {
               </VStack>
               )
             : (
-              <Image src={changeWorld} maxW='85%' m='-12px' />
+              <Image src={changeWorld} maxW='80%' m='-16px' mb='-28px' />
               )
           }
            <SIconButton

@@ -77,7 +77,7 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
       };
 
   return (
-    <VStack w='250px' minW='205px' h='100%' pr='6px'>
+    <VStack maxW='250px' minW='205px' h='100%' pr='6px'>
       <HStack p='6px' mt='4px' width='100%'>
         <FadingCircle
           activeBgColor='#FF5F57'
@@ -111,7 +111,7 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
             Lover of
             </Heading>
         </HStack>
-        <Box>
+        <VStack alignItems='start' w='100%' ml='8px'>
           {toggleSection.bullets.map(item => (
             <HStack key={item} mt='8px' height='24px'>
               <div>
@@ -125,7 +125,7 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
               <Text color='#747474' fontSize='14px' lineHeight='16px'>{item}</Text>
             </HStack>
           ))}
-        </Box>
+        </VStack>
         <SDivider/>
 
         {/* Footer */}

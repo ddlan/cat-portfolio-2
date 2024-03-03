@@ -45,15 +45,14 @@ const About: FC = () => {
             templateColumns='repeat(3, 1fr)'
             gap='12px'
           >
-            <GridItem><ChangeWorld /></GridItem>
+            <GridItem minW='280px'><ChangeWorld /></GridItem>
             <GridItem>
               <SGridCard>
                 <div style={{ height: '40px' }}/>
                 <div>
                   <motion.img
                     src={computer}
-                    className='centered'
-                    style={{ padding: '24px', maxWidth: '320px' }}
+                    className='centered-2'
                     initial="rest"
                     whileHover="hover"
                     variants={computerMotion}
@@ -61,7 +60,6 @@ const About: FC = () => {
                   <motion.img
                     src={toolbox}
                     className='centered'
-                    style={{ padding: '24px', maxWidth: '320px' }}
                     initial="hover"
                     whileHover="rest"
                     variants={computerMotion}
