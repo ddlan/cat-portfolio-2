@@ -10,6 +10,8 @@ import BackToTop from '../components/shared/BackToTop';
 import ChallengeIntro from '../components/challenge/ChallengeIntro';
 import Difficult from '../components/challenge/Difficult';
 import Riding from '../components/challenge/Riding';
+import { PrototypeFrame } from '../styles/components';
+import { PROTOTYPES } from '../constants';
 
 const Challenge: FC = () => {
   return (
@@ -20,6 +22,9 @@ const Challenge: FC = () => {
         mx='20vw'
       >
         <ChallengeIntro />
+        <Spacer height='200px' />
+
+        <PrototypeFrame className='wide-prototype' src={PROTOTYPES.designChallenge} />
         <Spacer height='200px' />
 
         <Difficult />

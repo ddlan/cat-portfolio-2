@@ -34,6 +34,8 @@ module.exports = {
 
         "@typescript-eslint/semi": ["error", "always"],
         "@typescript-eslint/no-unused-vars": ["warn"],
+        "@typescript-eslint/explicit-function-return-type": ["off"],
+        "@typescript-eslint/no-floating-promises": ["off"],
     },
     "ignorePatterns": ["*.js"],
 }

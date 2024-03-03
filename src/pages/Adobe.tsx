@@ -1,6 +1,6 @@
 import React, { useRef, type FC } from 'react';
 import {
-  Box, Spacer
+  Box, HStack, Spacer, VStack
 } from '@chakra-ui/react';
 
 import '../styles/styles.css';
@@ -31,7 +31,13 @@ const Adobe: FC = () => {
         <AdobeIntro scrollToTakeaways={scrollToTakeaways} />
         <Spacer height='200px' />
 
-        <PrototypeFrame className='wide-prototype' src={PROTOTYPES.adobeCert} />
+        <HStack className='wide-prototype' gap='12px'>
+          <PrototypeFrame className='left-prototype' src={PROTOTYPES.adobeCert} />
+          <VStack gap='12px'>
+            <PrototypeFrame className='right-prototype' src={PROTOTYPES.adobeScrollable} />
+            <PrototypeFrame className='right-prototype' src={PROTOTYPES.adobePFP} />
+          </VStack>
+        </HStack>
         <Spacer height='200px' />
 
         <Choosing />

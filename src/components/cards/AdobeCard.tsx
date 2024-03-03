@@ -59,16 +59,12 @@ const otherTextMotion = {
 
 const AdobeCard: FC = () => {
   return (
-    <Link to='adobe' className="text">
+    <Link to='adobe' className="text scrollbox">
       <motion.div
-        className="text"
+        className="text scrollbox-inner"
         initial="rest"
         whileHover="hover"
         animate="rest"
-        style={{
-          display: 'flex',
-          overflow: 'scroll'
-        }}
       >
       <motion.img
         src={iphone13}
