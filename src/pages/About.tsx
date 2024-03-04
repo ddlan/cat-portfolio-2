@@ -1,14 +1,18 @@
 import React, { useRef, type FC } from 'react';
-import { Box, Image, Grid, GridItem, HStack, Text, VStack, Container } from '@chakra-ui/react';
+import {
+  Box, Image, Grid, GridItem, HStack,
+  Text, VStack, Container, Divider
+} from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { ForceGraph2D } from 'react-force-graph';
 
 import computer from '../images/computer.png';
-import nodeEditor from '../images/node-editor.png';
+import cow from '../images/cow.jpg';
+import whale from '../images/whale.jpg';
 import toolbox from '../images/toolbox.png';
 
 import '../styles/styles.css';
-import { PrototypeFrame, SCard, SGridCard } from '../styles/components';
+import { BodyText, PrototypeFrame, SCard, SGridCard } from '../styles/components';
 import { HEIGHT, MARGIN } from '../styles/constants';
 import Navbar from '../components/Navbar';
 import BrowserSidebar from '../components/homepage/BrowserSidebar';
@@ -129,7 +133,20 @@ const About: FC = () => {
             <GridItem colSpan={2} minH='0'>
               <SGridCard>
                 <HStack minH='0'>
-                  <Image src={nodeEditor} p='16px' maxH='100%'/>
+                  <SCard maxW='200px' m='12px' maxH='100%' overflow='hidden'>
+                    <BodyText p='4px'>CROCHETING</BodyText>
+                    <Divider />
+                    <Image
+                      m='12px' ml='24px' mr='62px'
+                      maxW='50%'
+                      src={cow} borderRadius='7px' zIndex={2}
+                    />
+                    <Image
+                      m='12px' ml='62px' mr='24px' mt='-52px'
+                      maxW='50%'
+                      src={whale} borderRadius='7px'
+                    />
+                  </SCard>
                   <VStack
                     ref={graphParentRef}
                     minH='0'
@@ -175,7 +192,7 @@ const About: FC = () => {
                           100
                         );
                         ctx.lineWidth = 0.5;
-                        ctx.strokeStyle = 'rgb(73, 73, 73)';
+                        ctx.strokeStyle = node.id === 'Crocheting' ? '#fff' : 'rgb(73, 73, 73)';
                         ctx.stroke();
 
                         ctx.textAlign = 'center';
