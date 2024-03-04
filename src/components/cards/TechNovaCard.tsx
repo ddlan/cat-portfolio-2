@@ -127,7 +127,7 @@ const TechNovaCard: FC = () => {
               right: '5%',
               bottom: 0
             }}
-            variants={getSlideMotion({ startY: 88 })}
+            variants={getSlideMotion({ startY: 130 })}
           />
         </>
 
