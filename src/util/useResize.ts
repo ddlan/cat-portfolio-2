@@ -14,6 +14,9 @@ export const useResize = (ref: React.RefObject<HTMLElement>) => {
       handleResize();
     }
 
+    setTimeout(handleResize, 100);
+    setTimeout(handleResize, 500);
+
     window.addEventListener('resize', handleResize);
 
     return () => {
