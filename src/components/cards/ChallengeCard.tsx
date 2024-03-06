@@ -52,10 +52,8 @@ const getSlideMotion = (
 
 const challengeMotion = {
   rest: {
-    background:
-      '-webkit-radial-gradient(circle, #ffffffa0, #ffffff20)',
     WebkitBackgroundClip: 'text',
-    WebkitTextStroke: '1.5px transparent',
+    WebkitTextStroke: '0.85px #ffffff66',
     color: 'rgb(23, 23, 23)',
 
     ease: 'easeOut',
