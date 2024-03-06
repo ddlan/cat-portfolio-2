@@ -1,4 +1,4 @@
-import React, { useRef, type FC } from 'react';
+import React, { useRef, type FC, useEffect } from 'react';
 import {
   Box, Grid, GridItem, HStack,
   Text, VStack, Container
@@ -29,12 +29,13 @@ const graphData = {
     { id: 'Robotics' }
   ],
   links: [
-    { source: 'Crocheting', target: 'Hip Hop Dance', value: 1 },
-    { source: 'Hip Hop Dance', target: 'Curling', value: 1 },
-    { source: 'Curling', target: 'Reflective Writing', value: 1 },
+    { source: 'Crocheting', target: 'Spatial Art', value: 1 },
+    { source: 'Hip Hop Dance', target: '3D Sculpting', value: 1 },
+    { source: 'Curling', target: 'Hip Hop Dance', value: 1 },
     { source: 'Reflective Writing', target: 'Spatial Art', value: 1 },
     { source: 'Spatial Art', target: '3D Sculpting', value: 1 },
-    { source: '3D Sculpting', target: 'Robotics', value: 1 }
+    { source: '3D Sculpting', target: 'Robotics', value: 1 },
+    { source: 'Spatial Art', target: 'Robotics', value: 1 }
   ]
 };
 
@@ -77,6 +78,12 @@ const computerMotion = {
 const About: FC = () => {
   const graphParentRef = useRef<HTMLDivElement>(null);
   const { width, height } = useResize(graphParentRef);
+
+  const graphRef = useRef<any>(null);
+  useEffect(() => {
+    // Using any type to simplify
+    graphRef?.current?.d3Force('link')?.distance(35);
+  }, [graphRef]);
 
   return (
     <Box>
@@ -140,6 +147,7 @@ const About: FC = () => {
                   overflow='hidden'
                 >
                   <ForceGraph2D
+                    ref={graphRef}
                     width={width}
                     height={height}
                     graphData={graphData}
