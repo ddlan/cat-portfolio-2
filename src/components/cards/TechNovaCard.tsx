@@ -48,10 +48,8 @@ const getSlideMotion = (
 
 const technovaMotion = {
   rest: {
-    background:
-      '-webkit-radial-gradient(circle, #ffffffa0, #ffffff20)',
     WebkitBackgroundClip: 'text',
-    WebkitTextStroke: '1.5px #907CFF00',
+    WebkitTextStroke: '0.85px #ffffff66',
     color: 'rgb(23, 23, 23)',
 
     ease: 'easeOut',
