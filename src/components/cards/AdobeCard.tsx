@@ -1,9 +1,11 @@
 import React, { useState, type FC } from 'react';
 import { motion } from 'framer-motion';
+import useSound from 'use-sound';
 
 import iphone13 from '../../images/iphone13-full.png';
 import sparkle1 from '../../images/sparkle1.png';
 import sparkle2 from '../../images/sparkle2.svg';
+import twinkle from '../../res/audio/Twinkle.mp3';
 import '../../styles/styles.css'; import { Link } from 'react-router-dom';
 ;
 
@@ -92,6 +94,7 @@ const Sparkle: FC<TSparkle> = ({
 
 const AdobeCard: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [play] = useSound(twinkle as string);
 
   const renderSparkles = () => (
     <>
@@ -168,8 +171,13 @@ const AdobeCard: FC = () => {
         initial="rest"
         whileHover="hover"
         animate="rest"
-        onMouseEnter={() => { setIsHovered(true); }}
-        onMouseLeave={() => { setIsHovered(false); }}
+        onMouseEnter={() => {
+          setIsHovered(true);
+          play();
+        }}
+        onMouseLeave={() => {
+          setIsHovered(false);
+        }}
       >
         <motion.img
           src={iphone13}

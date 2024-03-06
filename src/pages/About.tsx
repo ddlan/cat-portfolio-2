@@ -8,6 +8,7 @@ import { ForceGraph2D } from 'react-force-graph';
 
 import computer from '../images/computer.png';
 import toolbox from '../images/toolbox.png';
+import computerNoise from '../res/audio/Computer Processing.mp3';
 
 import '../styles/styles.css';
 import { PrototypeFrame, SCard, SGridCard } from '../styles/components';
@@ -17,6 +18,7 @@ import BrowserSidebar from '../components/homepage/BrowserSidebar';
 import ChangeWorld from '../components/about/ChangeWorld';
 import { PROTOTYPES } from '../constants';
 import { useResize } from '../util/useResize';
+import useSound from 'use-sound';
 
 const graphData = {
   nodes: [
@@ -76,6 +78,8 @@ const computerMotion = {
 };
 
 const About: FC = () => {
+  const [play] = useSound(computerNoise as string);
+
   const graphParentRef = useRef<HTMLDivElement>(null);
   const { width, height } = useResize(graphParentRef);
 
@@ -109,7 +113,7 @@ const About: FC = () => {
             <GridItem>
               <SGridCard>
                 <div style={{ height: '40px' }}/>
-                <div>
+                <div onMouseEnter={() => { play(); }}>
                   <motion.img
                     src={computer}
                     className='centered-2'

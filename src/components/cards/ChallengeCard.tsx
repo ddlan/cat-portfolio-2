@@ -9,7 +9,10 @@ import editorLeft from '../../images/editor-left.png';
 import editorSearch from '../../images/editor-search.png';
 import editorBottom from '../../images/editor-bottom.png';
 import editorTop from '../../images/editor-top.png';
+import swipe from '../../res/audio/Swipe.mp3';
+
 import '../../styles/styles.css';
+import useSound from 'use-sound';
 
 const elementMotion = {
   rest: {
@@ -88,8 +91,10 @@ const otherTextMotion = {
 };
 
 const ChallengeCard: FC = () => {
+  const [play] = useSound(swipe as string);
+
   return (
-    <Link to='challenge' className="text">
+    <Link to='challenge' className="text" onMouseEnter={() => { play(); }}>
       <motion.div
         className="text"
         initial="rest"

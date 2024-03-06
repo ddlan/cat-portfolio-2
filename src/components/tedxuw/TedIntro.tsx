@@ -4,7 +4,7 @@ import {
 } from '../../styles/components';
 import '../../styles/styles.css';
 import Intro from '../shared/Intro';
-import { Button } from '@chakra-ui/react';
+import LoudButton from '../shared/LoudButton';
 
 interface TProps {
   scrollToProblem: () => void
@@ -46,10 +46,10 @@ const TedIntro: FC<TProps> = ({ scrollToProblem }) => {
         </>
       }
       buttons={[
-        <Button key='a' onClick={scrollToProblem}>Read WIP Case Study &nbsp;↓</Button>,
-        <Button as='a' key='b' href='https://tedxuw.com/' target='_blank'>
+        <LoudButton key='a' onClick={scrollToProblem}>Read WIP Case Study &nbsp;↓</LoudButton>,
+        <LoudButton as='a' key='b' href='https://tedxuw.com/' target='_blank'>
           Live Website&nbsp; ↗
-        </Button>
+        </LoudButton>
       ]}
     />
   );

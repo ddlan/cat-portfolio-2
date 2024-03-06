@@ -4,8 +4,8 @@ import {
 } from '../../styles/components';
 import '../../styles/styles.css';
 import Intro from '../shared/Intro';
-import { Button } from '@chakra-ui/react';
 import { LINKEDIN } from '../../constants';
+import LoudButton from '../shared/LoudButton';
 
 interface TProps {
   scrollToTakeaways: () => void
@@ -48,8 +48,10 @@ const AdobeIntro: FC<TProps> = ({ scrollToTakeaways }) => {
         </>
       }
       buttons={[
-        <Button key='a' onClick={scrollToTakeaways}>Skip to Takeaways ↓</Button>,
-        <Button as='a' key='b' href={LINKEDIN} target='_blank'>Reach Out On LinkedIn ↗</Button>
+        <LoudButton key='a' onClick={scrollToTakeaways}>Skip to Takeaways ↓</LoudButton>,
+        <LoudButton as='a' key='b' href={LINKEDIN} target='_blank'>
+          Reach Out On LinkedIn ↗
+        </LoudButton>
       ]}
     />
   );

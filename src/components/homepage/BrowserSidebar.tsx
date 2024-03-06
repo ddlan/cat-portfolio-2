@@ -1,6 +1,5 @@
 import React, { useState, type FC } from 'react';
 import {
-  Box,
   HStack, Heading, Image, Link,
   Switch,
   Text, VStack
@@ -15,10 +14,12 @@ import folder from '../../images/folder.svg';
 import linkedin from '../../images/linkedin.svg';
 import twitter from '../../images/twitter.svg';
 import email from '../../images/email.svg';
+import switchSound from '../../res/audio/Switch.mp3';
 
 import { SDivider } from '../../styles/components';
 import '../../styles/styles.css';
 import { LINKEDIN, TWITTER } from '../../constants';
+import useSound from 'use-sound';
 
 const SFadingCircle = styled(motion.div)`
   border-radius: 100%;
@@ -65,6 +66,7 @@ interface TProps {
 
 const BrowserSidebar: FC<TProps> = ({ isWork }) => {
   const [catIsHovered, setCatIsHovered] = useState(false);
+  const [play] = useSound(switchSound as string);
 
   const toggleSection = isWork
     ? {
@@ -120,6 +122,7 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
                   defaultChecked
                   border='1px solid #656565'
                   borderRadius='full'
+                  onChange={() => { play(); }}
                 />
               </div>
               <Text color='#747474' fontSize='14px' lineHeight='16px'>{item}</Text>

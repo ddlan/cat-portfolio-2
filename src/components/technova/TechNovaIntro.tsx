@@ -3,6 +3,7 @@ import '../../styles/styles.css';
 import Intro from '../shared/Intro';
 import { Button } from '@chakra-ui/react';
 import { Purple } from '../../styles/components';
+import LoudButton from '../shared/LoudButton';
 
 interface TProps {
   scrollToCaseStudy: () => void
@@ -42,7 +43,7 @@ const TechNovaIntro: FC<TProps> = ({ scrollToCaseStudy }) => {
         </>
       }
       buttons={[
-        <Button key='a' onClick={scrollToCaseStudy}>View WIP Case Study ↓</Button>
+        <LoudButton key='a' onClick={scrollToCaseStudy}>View WIP Case Study ↓</LoudButton>
       ]}
     />
   );
