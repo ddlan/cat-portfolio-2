@@ -6,6 +6,7 @@ import {
 
 import schedule1 from '../../images/schedule1.png';
 import schedule2 from '../../images/schedule2.png';
+import tedxuwMobile from '../../images/tedxuw-mobile.png';
 import {
   SCard, BodyText,
   SectionHeading,
@@ -65,7 +66,10 @@ const Wireframing: FC = () => {
         The interactable desktop designs are as follows:
       </BodyText>
 
-      <PrototypeFrame className='wide-prototype' src={PROTOTYPES.tedxuw} />
+      <HStack className='wide-prototype'>
+        <PrototypeFrame className='big-left-prototype' src={PROTOTYPES.tedxuw} />
+        <Image className='right-img' src={tedxuwMobile} />
+      </HStack>
 
     </Box>
   );
