@@ -109,7 +109,7 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
           <Image src={folder} alt='folder icon' height='20px'/>
           <Heading as='h2' size='sm' color='#ffffffc0' style={{ lineHeight: 'normal' }}>
             Lover of
-            </Heading>
+          </Heading>
         </HStack>
         <VStack alignItems='start' w='100%' ml='8px'>
           {toggleSection.bullets.map(item => (
@@ -127,6 +127,13 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
           ))}
         </VStack>
         <SDivider/>
+
+        <HStack alignItems='start' width='100%'>
+          <Image src={folder} alt='folder icon' height='20px'/>
+          <Heading as='h2' size='sm' color='#ffffffc0' style={{ lineHeight: 'normal' }}>
+            Product Designer
+          </Heading>
+        </HStack>
 
         {/* Footer */}
         <HStack marginTop='auto' marginBottom='8px'>

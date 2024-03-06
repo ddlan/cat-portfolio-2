@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import '../styles/styles.css';
 import '../styles/styleguide.css';
 import cat from '../images/Cat.png';
-import resume from '../res/cat-resume.pdf';
+import resume from '../res/catherine-hoang.pdf';
 
 interface TToggleBoxProps {
   name: string
