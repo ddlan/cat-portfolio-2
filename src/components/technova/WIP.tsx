@@ -17,7 +17,7 @@ const WIP: FC<TProps> = ({ caseStudyRef }) => {
       <SectionTitle title='⭐️ This Case Study is a Work in Progress' hideIcon={true} />
       <BodyText>
         {/* eslint-disable-next-line max-len */}
-        In the meantime, you can check out my other work such as my <Link to='/adobe' style={{ textDecoration: 'underline' }}>Adobe case study</Link> or the <Link to='/challenge' style={{ textDecoration: 'underline' }}>12-Week Design Challenge</Link>.
+        In the meantime, you can check out my other work at <Link to='/adobe' style={{ textDecoration: 'underline' }}>Adobe</Link> or the <Link to='/challenge' style={{ textDecoration: 'underline' }}>12-Week Design Challenge</Link>.
       </BodyText>
     </Box>
   );

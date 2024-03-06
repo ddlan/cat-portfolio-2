@@ -10,6 +10,7 @@ import '../../styles/styles.css';
 
 import SectionTitle from '../shared/SectionTitle';
 import BackToTop from '../shared/BackToTop';
+import { Link } from 'react-router-dom';
 
 const WIP: FC = () => {
   return (
@@ -21,7 +22,7 @@ const WIP: FC = () => {
         The UX research content, interactable design, and context behind design decisions are being greatly expanded upon.
         <br /><br />
         {/* eslint-disable-next-line max-len */}
-        In the meantime, you can check out my other work such as my Adobe case study or the 12-Week Design Challenge.
+        In the meantime, you can check out my other work at <Link to='/adobe' style={{ textDecoration: 'underline' }}>Adobe</Link> or the <Link to='/challenge' style={{ textDecoration: 'underline' }}>12-Week Design Challenge</Link>.
       </BodyText>
 
       <BackToTop />

@@ -46,8 +46,10 @@ const TedIntro: FC<TProps> = ({ scrollToProblem }) => {
         </>
       }
       buttons={[
-        <Button key='a' onClick={scrollToProblem}>Read WIP Case Study</Button>,
-        <Button as='a' key='b' href='https://tedxuw.com/' target='_blank'>Live Website</Button>
+        <Button key='a' onClick={scrollToProblem}>Read WIP Case Study &nbsp;↓</Button>,
+        <Button as='a' key='b' href='https://tedxuw.com/' target='_blank'>
+          Live Website&nbsp; ↗
+        </Button>
       ]}
     />
   );
