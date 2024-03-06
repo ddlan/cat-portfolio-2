@@ -1,18 +1,16 @@
 import React, { useRef, type FC } from 'react';
 import {
-  Box, Image, Grid, GridItem, HStack,
-  Text, VStack, Container, Divider
+  Box, Grid, GridItem, HStack,
+  Text, VStack, Container
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { ForceGraph2D } from 'react-force-graph';
 
 import computer from '../images/computer.png';
-import cow from '../images/cow.jpg';
-import whale from '../images/whale.jpg';
 import toolbox from '../images/toolbox.png';
 
 import '../styles/styles.css';
-import { BodyText, PrototypeFrame, SCard, SGridCard } from '../styles/components';
+import { PrototypeFrame, SCard, SGridCard } from '../styles/components';
 import { HEIGHT, MARGIN } from '../styles/constants';
 import Navbar from '../components/Navbar';
 import BrowserSidebar from '../components/homepage/BrowserSidebar';
@@ -132,80 +130,64 @@ const About: FC = () => {
             </GridItem>
             <GridItem colSpan={2} minH='0'>
               <SGridCard>
-                <HStack minH='0'>
-                  <SCard maxW='200px' m='12px' maxH='100%' overflow='hidden'>
-                    <BodyText p='4px'>CROCHETING</BodyText>
-                    <Divider />
-                    <Image
-                      m='12px' ml='24px' mr='62px'
-                      maxW='50%'
-                      src={cow} borderRadius='7px' zIndex={2}
-                    />
-                    <Image
-                      m='12px' ml='62px' mr='24px' mt='-52px'
-                      maxW='50%'
-                      src={whale} borderRadius='7px'
-                    />
-                  </SCard>
-                  <VStack
-                    ref={graphParentRef}
-                    minH='0'
-                    h='100%'
-                    justifyContent='space-between'
-                    maxW='100%'
-                    flex='1'
-                    overflow='hidden'
-                  >
-                    <ForceGraph2D
-                      width={width}
-                      height={height}
-                      graphData={graphData}
-                      linkColor={() => '#727272'}
-                      nodeCanvasObject={(node, ctx, globalScale) => {
-                        node.x = node.x ?? 0;
-                        node.y = node.y ?? 0;
-                        node.color = node.color ?? 'transparent';
+                <VStack
+                  ref={graphParentRef}
+                  minH='0'
+                  h='100%'
+                  justifyContent='space-between'
+                  maxW='100%'
+                  flex='1'
+                  overflow='hidden'
+                >
+                  <ForceGraph2D
+                    width={width}
+                    height={height}
+                    graphData={graphData}
+                    linkColor={() => '#727272'}
+                    nodeCanvasObject={(node, ctx, globalScale) => {
+                      node.x = node.x ?? 0;
+                      node.y = node.y ?? 0;
+                      node.color = node.color ?? 'transparent';
 
-                        const label = node.id;
-                        const fontSize = 6 + globalScale / 12;
-                        ctx.font = `italic ${fontSize}px Sans-Serif`;
-                        const textWidth = ctx.measureText(label).width;
-                        const bckgDimensions: [number, number] = [textWidth, fontSize]
-                          .map(n => n + fontSize * 1.7) as [number, number];
+                      const label = node.id;
+                      const fontSize = 6 + globalScale / 12;
+                      ctx.font = `italic ${fontSize}px Sans-Serif`;
+                      const textWidth = ctx.measureText(label).width;
+                      const bckgDimensions: [number, number] = [textWidth, fontSize]
+                        .map(n => n + fontSize * 1.7) as [number, number];
 
-                        roundRect({
-                          ctx,
-                          x0: node.x - bckgDimensions[0] / 2,
-                          y0: node.y - bckgDimensions[1] / 2,
-                          x1: node.x + bckgDimensions[0] / 2,
-                          y1: node.y + bckgDimensions[1] / 2,
-                          r: 100,
-                          color: 'rgba(34, 34, 34)'
-                        });
+                      roundRect({
+                        ctx,
+                        x0: node.x - bckgDimensions[0] / 2,
+                        y0: node.y - bckgDimensions[1] / 2,
+                        x1: node.x + bckgDimensions[0] / 2,
+                        y1: node.y + bckgDimensions[1] / 2,
+                        r: 100,
+                        color: 'rgba(34, 34, 34)'
+                      });
 
-                        ctx.beginPath();
-                        ctx.roundRect(
-                          node.x - bckgDimensions[0] / 2,
-                          node.y - bckgDimensions[1] / 2,
-                          bckgDimensions[0],
-                          bckgDimensions[1],
-                          100
-                        );
-                        ctx.lineWidth = 0.5;
-                        ctx.strokeStyle = node.id === 'Crocheting' ? '#fff' : 'rgb(73, 73, 73)';
-                        ctx.stroke();
+                      ctx.beginPath();
+                      ctx.roundRect(
+                        node.x - bckgDimensions[0] / 2,
+                        node.y - bckgDimensions[1] / 2,
+                        bckgDimensions[0],
+                        bckgDimensions[1],
+                        100
+                      );
+                      ctx.lineWidth = 0.5;
+                      ctx.strokeStyle = 'rgb(73, 73, 73)';
+                      ctx.stroke();
 
-                        ctx.textAlign = 'center';
-                        ctx.textBaseline = 'middle';
-                        ctx.fillStyle = '#fff';
-                        ctx.fillText(label, node.x, node.y);
-                      }}
-                    />
-                    <Container position='absolute' right={0} bottom={0}>
-                      <Text className='scard-caption'>Mind Map of My Interests</Text>
-                    </Container>
-                  </VStack>
-                </HStack>
+                      ctx.textAlign = 'center';
+                      ctx.textBaseline = 'middle';
+                      ctx.fillStyle = '#fff';
+                      ctx.fillText(label, node.x, node.y);
+                    }}
+                  />
+                  <Container position='absolute' right={0} bottom={0}>
+                    <Text className='scard-caption'>Mind Map of My Interests</Text>
+                  </Container>
+                </VStack>s
               </SGridCard>
             </GridItem>
           </Grid>
