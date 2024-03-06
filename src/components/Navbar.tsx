@@ -16,7 +16,7 @@ const ToggleBox: FC<TToggleBoxProps> = ({ name, isSelected }) => {
   return (
     isSelected
       ? (
-          <Link to=''>
+          <Link to={name === 'Work' ? '/' : '/about'}>
             <Box className='nav-border'>
               <Text className='nav' fontWeight='700'>
                 {name}
