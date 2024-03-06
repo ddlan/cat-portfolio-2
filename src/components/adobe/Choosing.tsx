@@ -72,15 +72,12 @@ const Choosing: FC = () => {
       <HStack gap='24px'>
         {plan}
         <VStack alignItems='start' flex='2' >
-          <SmallHeading mt='32px' mb='16px'>Design Process</SmallHeading>
+          <SmallHeading mt='32px' mb='16px'>Main Questions</SmallHeading>
           <BodyText>
             <Orange style={{ fontStyle: 'italic' }}>
               {/* eslint-disable-next-line max-len */}
               How might we design a web experience that effectively excites long-term, continuous learning for professional skilling? Can “play” accelerate upskilling?
             </Orange>
-            <br/><br/>
-            {/* eslint-disable-next-line max-len */}
-            After reviewing Adobe’s UX and accessibility guidelines, conducting user research, analyzing gathered data, and synthesizing the information into actionable insights, I prioritized these features in the concept:
           </BodyText>
           <SmallHeading mt='48px' mb='16px'>
             The Challenge
