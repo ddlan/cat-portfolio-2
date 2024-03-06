@@ -108,7 +108,7 @@ const BrowserSidebar: FC<TProps> = ({ isWork }) => {
         <HStack alignItems='start' width='100%'>
           <Image src={folder} alt='folder icon' height='20px'/>
           <Heading as='h2' size='sm' color='#ffffffc0' style={{ lineHeight: 'normal' }}>
-            Lover of
+            {toggleSection.title}
           </Heading>
         </HStack>
         <VStack alignItems='start' w='100%' ml='8px'>
