@@ -1,10 +1,13 @@
 import React, { type FC } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import codeblock from '../../images/codeblock.png';
 import ufo from '../../images/ufo.png';
 import telescope from '../../images/telescope.png';
-import '../../styles/styles.css'; import { Link } from 'react-router-dom';
+import spaceJourney from '../../res/audio/Space Journey.mp3';
+import '../../styles/styles.css';
+import useSound from 'use-sound';
 ;
 
 const elementMotion = {
@@ -84,8 +87,15 @@ const otherTextMotion = {
 };
 
 const TechNovaCard: FC = () => {
+  const [play, { stop }] = useSound(spaceJourney as string);
+
   return (
-    <Link to='technova' className="text">
+    <Link
+      to='technova'
+      className="text"
+      onMouseEnter={() => { play(); }}
+      onMouseLeave={() => { stop(); }}
+    >
       <motion.div
         className="text"
         initial="rest"

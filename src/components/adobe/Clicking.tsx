@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import { Box, Button } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 import {
   BodyText,
@@ -12,6 +12,7 @@ import puzz2 from '../../images/puzz2.svg';
 
 import SectionTitle from '../shared/SectionTitle';
 import { LINKEDIN } from '../../constants';
+import LoudButton from '../shared/LoudButton';
 
 const Clicking: FC = () => {
   return (
@@ -25,7 +26,9 @@ const Clicking: FC = () => {
         As much of the content is under NDA, if you’re interested in learning more, let’s connect!
       </BodyText>
 
-      <Button as='a' href={LINKEDIN} target='_blank' mt='24px'>Reach Out On LinkedIn ↗</Button>
+      <LoudButton as='a' href={LINKEDIN} target='_blank' mt='24px'>
+        Reach Out On LinkedIn ↗
+      </LoudButton>
     </Box>
   );
 };

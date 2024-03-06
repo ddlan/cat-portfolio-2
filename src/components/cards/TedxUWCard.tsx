@@ -6,9 +6,12 @@ import tedGround from '../../images/ted-ground.svg';
 import windmill from '../../images/windmill.svg';
 import snowflake1 from '../../images/snowflake1.svg';
 import snowflake2 from '../../images/snowflake2.svg';
+import wind from '../../res/audio/Winter Winds.mp3';
+
 import '../../styles/styles.css';
 import { Link } from 'react-router-dom';
 import { useResize } from '../../util/useResize';
+import useSound from 'use-sound';
 
 const groundMotion = {
   rest: {
@@ -120,6 +123,7 @@ const Snowflake: FC<TSnowflake> = ({ type1, left, top, isHovered, gust }) => {
 const TedxUWCard: FC = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const { width } = useResize(imageRef);
+  const [play, { stop }] = useSound(wind as string);
 
   const [isHovered, setIsHovered] = useState(false);
   const [gustNum, setGustNum] = useState(0);
@@ -171,8 +175,8 @@ const TedxUWCard: FC = () => {
         whileHover="hover"
         animate="rest"
         style={{ display: 'flex', overflow: 'hidden' }}
-        onMouseEnter={() => { setIsHovered(true); }}
-        onMouseLeave={() => { setIsHovered(false); }}
+        onMouseEnter={() => { setIsHovered(true); play(); }}
+        onMouseLeave={() => { setIsHovered(false); stop(); }}
       >
       <motion.img
         ref={imageRef}
