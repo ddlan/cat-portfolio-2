@@ -9,8 +9,8 @@ import CaseStudyCard from '../components/cards/CaseStudyCard';
 
 const Homepage: FC = () => {
   const caseStudies = [
-    'TedxUW',
     'Adobe',
+    'TedxUW',
     'Challenge',
     'TechNova'
   ];
