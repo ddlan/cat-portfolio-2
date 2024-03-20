@@ -151,7 +151,7 @@ const ChallengeCard: FC = () => {
               left: '74%',
               bottom: 0
             }}
-            variants={getSlideMotion({ startY: 68 })}
+            variants={getSlideMotion({ startY: 72 })}
           />
           <motion.img
             src={editorSearch}

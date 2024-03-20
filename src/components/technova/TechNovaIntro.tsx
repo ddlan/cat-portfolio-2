@@ -1,7 +1,6 @@
 import React, { type FC } from 'react';
 import '../../styles/styles.css';
 import Intro from '../shared/Intro';
-import { Button } from '@chakra-ui/react';
 import { Purple } from '../../styles/components';
 import LoudButton from '../shared/LoudButton';
 

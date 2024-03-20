@@ -88,6 +88,7 @@ const otherTextMotion = {
 
 const TechNovaCard: FC = () => {
   const [play, { stop }] = useSound(spaceJourney as string);
+  window.addEventListener('blur', () => { stop(); });
 
   return (
     <Link
@@ -95,6 +96,7 @@ const TechNovaCard: FC = () => {
       className="text"
       onMouseEnter={() => { play(); }}
       onMouseLeave={() => { stop(); }}
+      onClick={() => { stop(); }}
     >
       <motion.div
         className="text"

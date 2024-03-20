@@ -124,6 +124,7 @@ const TedxUWCard: FC = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const { width } = useResize(imageRef);
   const [play, { stop }] = useSound(wind as string);
+  window.addEventListener('blur', () => { stop(); });
 
   const [isHovered, setIsHovered] = useState(false);
   const [gustNum, setGustNum] = useState(0);
@@ -168,15 +169,19 @@ const TedxUWCard: FC = () => {
   );
 
   return (
-    <Link to='tedxuw' className="text">
+    <Link
+      to='tedxuw'
+      className="text"
+      onMouseEnter={() => { setIsHovered(true); play(); }}
+      onMouseLeave={() => { setIsHovered(false); stop(); }}
+      onClick={() => { stop(); }}
+    >
       <motion.div
         className="text"
         initial="rest"
         whileHover="hover"
         animate="rest"
         style={{ display: 'flex', overflow: 'hidden' }}
-        onMouseEnter={() => { setIsHovered(true); play(); }}
-        onMouseLeave={() => { setIsHovered(false); stop(); }}
       >
       <motion.img
         ref={imageRef}
