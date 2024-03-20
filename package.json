@@ -35,7 +35,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build --repo git@github.com:catherinehoang44/cat-portfolio.git"
+    "deploy": "gh-pages -d build --repo git@github.com:catherinehoang44/catherinehoang44.github.io.git"
   },
   "eslintConfig": {
     "extends": [
