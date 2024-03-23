@@ -7,7 +7,10 @@ import useSound from 'use-sound';
 const LoudButton: FC<ButtonProps & { href?: string, target?: string }> = (props) => {
   const [play] = useSound(click as string);
   return (
-    <Button {...props} onMouseEnter={() => { play(); }} />
+    <Button {...props} onClick={e => {
+      play();
+      props.onClick?.(e);
+    }} />
   );
 };
 

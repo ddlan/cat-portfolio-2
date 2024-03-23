@@ -14,7 +14,7 @@ import folder from '../../images/folder.svg';
 import linkedin from '../../images/linkedin.svg';
 import twitter from '../../images/twitter.svg';
 import email from '../../images/email.svg';
-import switchSound from '../../res/audio/Switch.mp3';
+import click from '../../res/audio/Button Click.wav';
 
 import { SDivider } from '../../styles/components';
 import '../../styles/styles.css';
@@ -66,7 +66,7 @@ interface TProps {
 
 const BrowserSidebar: FC<TProps> = ({ isWork }) => {
   const [catIsHovered, setCatIsHovered] = useState(false);
-  const [play] = useSound(switchSound as string);
+  const [play] = useSound(click as string);
 
   const toggleSection = isWork
     ? {
