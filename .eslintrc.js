@@ -30,7 +30,7 @@ module.exports = {
     ],
     "rules": {
         "semi": "off",
-        'max-len': ["warn", { "code": 100 }],
+        'max-len': ["warn", { "code": 120 }],
 
         "@typescript-eslint/semi": ["error", "always"],
         "@typescript-eslint/no-unused-vars": ["warn"],

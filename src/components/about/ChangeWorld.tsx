@@ -1,5 +1,5 @@
 import React, { useState, type FC } from 'react';
-import { HStack, IconButton, Image, Text, VStack } from '@chakra-ui/react';
+import { HStack, IconButton, Image, Link, Text, VStack } from '@chakra-ui/react';
 
 import changeWorld from '../../images/change-world.png';
 
@@ -37,14 +37,17 @@ const ChangeWorld: FC = () => {
           {isTextMode
             ? (
               <VStack alignItems='center' w='100%' p='12px 8px 0px 8px' gap='12px'>
-                <SideHeading style={{ color: '#fff' }}>Who is Catherine (Cat)?</SideHeading>
-                <Text fontSize='12px'>
+                <Text fontSize='16px'>
                   {/* eslint-disable-next-line max-len */}
-                  She is a Vietnamese-Canadian that fell in love with building communities and all things creative. She began tinkering on projects to light joy in others, and is often excited.
+                  A Toronto-based designer who fell in love with tinkering on projects and dabbling in all things creative to light joy in others.
                   <br /><br />
-                  Strength: Sparking intellectual surprise through her designs.
+                  She is often excited and makes it a mission to spark intellectual surprise through her designs.
                   <br /><br />
-                  Check out how Cat thinks 💭, grows 🌱,️ works 👷🏻‍, and loves 💜.
+                  Check out how Cat&nbsp;
+                  <Link href='https://catherinehoang.substack.com/'>thinks 💭</Link>,&nbsp;
+                  <Link href='https://whoiscat.framer.website/'>grows 🌱</Link>,&nbsp;
+                  <Link href='https://game-of-life.framer.website/'>works 👷🏻</Link> ,&nbsp;
+                  <Link href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'> and loves 💜</Link>.
                 </Text>
               </VStack>
               )

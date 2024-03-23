@@ -199,7 +199,7 @@ const About: FC = () => {
                   <Container position='absolute' right={0} bottom={0}>
                     <Text className='scard-caption'>Mind Map of My Interests</Text>
                   </Container>
-                </VStack>s
+                </VStack>
               </SGridCard>
             </GridItem>
           </Grid>
