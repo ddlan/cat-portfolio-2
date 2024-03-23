@@ -22,13 +22,13 @@ const ChallengeIntro: FC<TProps> = ({ scrollToDesign }) => {
           items: ['UX Designer', 'UX Researcher']
         },
         {
+          title: 'TIMELINE',
+          items: ['3 months']
+        },
+        {
           title: 'TOOLS',
           items: ['Figma', 'Figjam', 'Adobe After Effects', 'Usertesting.com',
             'Jira', 'ClickUp', 'Notion', 'Excel', 'Webflow', 'Blender']
-        },
-        {
-          title: 'TIMELINE',
-          items: ['3 months']
         }
       ]}
       body={

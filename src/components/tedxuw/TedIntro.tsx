@@ -25,12 +25,12 @@ const TedIntro: FC<TProps> = ({ scrollToProblem }) => {
           items: ['Web Designer', 'Developer', 'VP Marketing']
         },
         {
-          title: 'TOOLS',
-          items: ['Figma', 'FigJam']
-        },
-        {
           title: 'TIMELINE',
           items: ['8 months']
+        },
+        {
+          title: 'TOOLS',
+          items: ['Figma', 'FigJam']
         }
       ]}
       body={

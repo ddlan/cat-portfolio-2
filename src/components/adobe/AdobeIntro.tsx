@@ -26,12 +26,12 @@ const AdobeIntro: FC<TProps> = ({ scrollToTakeaways }) => {
           items: ['Group Manager', 'Marketing Managers', 'Adobe Product Teams']
         },
         {
-          title: 'TOOLS',
-          items: ['Figma', 'Adobe XD', 'Monday.com', 'Miro', 'PowerBI']
-        },
-        {
           title: 'TIMELINE',
           items: ['2 months']
+        },
+        {
+          title: 'TOOLS',
+          items: ['Figma', 'Adobe XD', 'Monday.com', 'Miro', 'PowerBI']
         }
       ]}
       body={

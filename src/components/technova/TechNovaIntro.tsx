@@ -23,12 +23,12 @@ const TechNovaIntro: FC<TProps> = ({ scrollToCaseStudy }) => {
           items: ['3 Web Designers', '4 Developers', 'VP Design']
         },
         {
-          title: 'TOOLS',
-          items: ['Figma', 'Figjam']
-        },
-        {
           title: 'TIMELINE',
           items: ['2 months']
+        },
+        {
+          title: 'TOOLS',
+          items: ['Figma', 'Figjam']
         }
       ]}
       body={
