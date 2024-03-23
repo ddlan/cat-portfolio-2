@@ -42,7 +42,7 @@ interface TNavbarProps {
 
 const Navbar: FC<TNavbarProps> = ({ isWork }) => {
   return (
-    <HStack justify='space-between' h='98px' mx='100px'>
+    <HStack justify='space-between' h='98px' mx='8vw'>
       <Link to="/">
         <HStack style={{ cursor: 'pointer' }}>
           <Image src={cat} alt='Cat icon' boxSize="32px"/>

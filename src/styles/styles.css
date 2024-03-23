@@ -191,10 +191,22 @@
 
 .scrollbox {
   overflow-y: scroll;
+  overflow-x: hidden;
   visibility: hidden;
 }
 
 .scrollbox:hover,
 .scrollbox-inner {
   visibility: visible;
+}
+
+.case-study-card {
+  width: calc(50% - 6px);
+  min-width: 340px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .case-study-card {
+    width: 100%;
+  }
 }

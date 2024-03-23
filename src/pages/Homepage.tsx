@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import { Box, Grid, GridItem, HStack } from '@chakra-ui/react';
+import { Box, Container, Grid, GridItem, HStack } from '@chakra-ui/react';
 import '../styles/styles.css';
 import { SCard } from '../styles/components';
 import { HEIGHT, MARGIN } from '../styles/constants';
@@ -20,27 +20,25 @@ const Homepage: FC = () => {
       <Navbar isWork={true} />
       <SCard
         h={`calc(100vh - ${HEIGHT.navbar} - ${MARGIN.homepageB})`}
-        minH='600px'
-        minW='800px'
+        minW='630px'
         mx={MARGIN.homepageX}
         mb={MARGIN.homepageB}
         p='12px'
       >
         <HStack h='100%'>
           <BrowserSidebar isWork={true} />
-          <Grid
+          <HStack
             w='100%'
             h='100%'
-            templateRows='repeat(2, 1fr)'
-            templateColumns='repeat(2, 1fr)'
             gap='12px'
+            flexWrap='wrap'
+            alignItems='stretch'
+            alignContent='stretch'
           >
             {caseStudies.map(name =>
-              <GridItem key={name}>
-                <CaseStudyCard name={name} />
-              </GridItem>)
-            }
-          </Grid>
+              <CaseStudyCard key={name} name={name} />
+            )}
+          </HStack>
         </HStack>
       </SCard>
     </Box>

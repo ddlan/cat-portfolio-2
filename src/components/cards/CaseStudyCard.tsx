@@ -23,10 +23,7 @@ const CaseStudyCard: FC<TProps> = ({ name }) => {
 
   return (
     <SCard
-      w='100%'
-      h='100%'
-      textAlign='center'
-      justify='center'
+      className='case-study-card'
     >
       {renderBody()}
     </SCard>

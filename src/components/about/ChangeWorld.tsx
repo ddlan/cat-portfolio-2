@@ -4,7 +4,7 @@ import { HStack, IconButton, Image, Link, Text, VStack } from '@chakra-ui/react'
 import changeWorld from '../../images/change-world.png';
 
 import '../../styles/styles.css';
-import { SGridCard, SideHeading } from '../../styles/components';
+import { SGridCard } from '../../styles/components';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import styled from 'styled-components';
 
