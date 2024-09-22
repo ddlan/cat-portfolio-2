@@ -1,8 +1,9 @@
-import '@fontsource/nunito';
+import '@fontsource-variable/stix-two-text';
+import '@fontsource-variable/inter';
 import { extendTheme, theme as baseTheme, type ThemeConfig } from '@chakra-ui/react';
 
 const config: ThemeConfig = {
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useSystemColorMode: false
 };
 
@@ -16,7 +17,7 @@ const colors = {
     _dark: baseTheme.colors.gray['400']
   },
   background: {
-    _light: baseTheme.colors.white,
+    _light: 'rgb(250,250,250)',
     _dark: baseTheme.colors.black
   },
   black: '#000'
@@ -27,8 +28,8 @@ export const customTheme = extendTheme({
   colors,
 
   fonts: {
-    heading: '\'Nunito\', sans-serif',
-    body: '\'Nunito\', sans-serif'
+    heading: '\'STIX Two Text Variable\', sans-serif',
+    body: '\'Inter Variable\', sans-serif'
   },
 
   semanticTokens: {

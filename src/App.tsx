@@ -1,4 +1,5 @@
-import '@fontsource/nunito';
+import '@fontsource-variable/stix-two-text';
+import '@fontsource-variable/inter';
 
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';

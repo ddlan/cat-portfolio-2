@@ -1,32 +1,30 @@
-import React, { type ReactNode, type FC } from 'react';
+import React, { type FC } from 'react';
 import '../../styles/styles.css';
-import { SCard } from '../../styles/components';
-import TedxUWCard from './TedxUWCard';
-import AdobeCard from './AdobeCard';
-import ChallengeCard from './ChallengeCard';
-import TechNovaCard from './TechNovaCard';
+import { Card, Heading, HStack, Image, Text, VStack } from '@chakra-ui/react';
 
 interface TProps {
-  name: string
+  title: string
+  subtitle: string
+  image: string
+  tags: string[]
 };
 
-const CaseStudyCard: FC<TProps> = ({ name }) => {
-  const renderBody = (): ReactNode => {
-    switch (name) {
-      case 'TedxUW': return <TedxUWCard />;
-      case 'Adobe': return <AdobeCard />;
-      case 'Challenge': return <ChallengeCard />;
-      case 'TechNova': return <TechNovaCard />;
-      default: return null;
-    }
-  };
-
+const CaseStudyCard: FC<TProps> = ({ title, subtitle, image, tags }) => {
   return (
-    <SCard
-      className='case-study-card'
-    >
-      {renderBody()}
-    </SCard>
+    <Card>
+      <HStack>
+        <Image src={image}/>
+        <VStack>
+          <Heading>{title}</Heading>
+          <Text>{subtitle}</Text>
+        </VStack>
+      </HStack>
+      <HStack>
+        {tags.map((tag) => (
+          <Text key={tag}>{tag}</Text>
+        ))}
+        </HStack>
+    </Card>
   );
 };
 

@@ -1,5 +1,5 @@
 export const MARGIN = {
-  homepageX: '5.5vw',
+  homepageX: '20vw',
   homepageB: '24px'
 };
 

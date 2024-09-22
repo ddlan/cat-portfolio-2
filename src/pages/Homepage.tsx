@@ -1,47 +1,65 @@
 import React, { type FC } from 'react';
-import { Box, Container, Grid, GridItem, HStack } from '@chakra-ui/react';
+import { Card, VStack, Image } from '@chakra-ui/react';
+
+import computer from '../images/new/computer.svg';
+import adobeLogo from '../images/new/adobe-logo.svg';
+import microsoftLogo from '../images/new/microsoft-logo.svg';
+import tedxLogo from '../images/new/tedx-logo.svg';
+import collabLogo from '../images/new/collab-logo.svg';
+
 import '../styles/styles.css';
-import { SCard } from '../styles/components';
-import { HEIGHT, MARGIN } from '../styles/constants';
-import Navbar from '../components/Navbar';
-import BrowserSidebar from '../components/homepage/BrowserSidebar';
 import CaseStudyCard from '../components/cards/CaseStudyCard';
 
-const Homepage: FC = () => {
-  const caseStudies = [
-    'Adobe',
-    'TedxUW',
-    'Challenge',
-    'TechNova'
-  ];
+const caseStudies = [
+  {
+    title: 'Learning Platform',
+    subtitle: '+500% new users',
+    image: adobeLogo,
+    tags: ['Product Design,', 'Accessibility']
+  },
+  {
+    title: 'Minecraft Go-to-Market',
+    subtitle: '100% YoY growth',
+    image: microsoftLogo,
+    tags: ['Product Strategy', 'Marketing']
+  },
+  {
+    title: 'Site Design',
+    subtitle: '150% sign-up KPIs',
+    image: tedxLogo,
+    tags: ['UX Design,', 'Visual Design']
+  },
+  {
+    title: 'Collaborations',
+    subtitle: '12 collaborations, 12 weeks',
+    image: collabLogo,
+    tags: ['Motion Design,', 'UX Research']
+  }
+];
 
+const Homepage: FC = () => {
   return (
-    <Box>
-      <Navbar isWork={true} />
-      <SCard
-        h={`calc(100vh - ${HEIGHT.navbar} - ${MARGIN.homepageB})`}
-        minW='630px'
-        mx={MARGIN.homepageX}
-        mb={MARGIN.homepageB}
-        p='12px'
+    <VStack h='100%'
+      w='630px'
+      my='100px'
+      mx='auto'
+>
+      <Image src={computer} w='100%'/>
+
+      <VStack
+        w='100%'
+        justifyContent='space-between'
       >
-        <HStack h='100%'>
-          <BrowserSidebar isWork={true} />
-          <HStack
-            w='100%'
-            h='100%'
-            gap='12px'
-            flexWrap='wrap'
-            alignItems='stretch'
-            alignContent='stretch'
-          >
-            {caseStudies.map(name =>
-              <CaseStudyCard key={name} name={name} />
-            )}
-          </HStack>
-        </HStack>
-      </SCard>
-    </Box>
+        <Card>Work</Card>
+        {caseStudies.map(({ title, subtitle, image, tags }) => <CaseStudyCard
+          key={title}
+          title={title}
+          subtitle={subtitle}
+          image={image}
+          tags={tags}
+        />)}
+      </VStack>
+    </VStack>
   );
 };
 
