@@ -94,7 +94,7 @@ const Sparkle: FC<TSparkle> = ({
 
 const AdobeCard: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [play] = useSound(twinkle as string);
+  const [play] = useSound(twinkle as string, { volume: 0.5 });
 
   const renderSparkles = () => (
     <>

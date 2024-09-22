@@ -91,7 +91,7 @@ const otherTextMotion = {
 };
 
 const ChallengeCard: FC = () => {
-  const [play] = useSound(swipe as string);
+  const [play] = useSound(swipe as string, { volume: 0.5 });
 
   return (
     <Link to='challenge' className="text" onMouseEnter={() => { play(); }}>

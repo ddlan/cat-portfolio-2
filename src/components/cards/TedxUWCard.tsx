@@ -123,7 +123,7 @@ const Snowflake: FC<TSnowflake> = ({ type1, left, top, isHovered, gust }) => {
 const TedxUWCard: FC = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const { width } = useResize(imageRef);
-  const [play, { stop }] = useSound(wind as string);
+  const [play, { stop, sound }] = useSound(wind as string, { volume: 0.5 });
   window.addEventListener('blur', () => { stop(); });
 
   const [isHovered, setIsHovered] = useState(false);
@@ -174,7 +174,7 @@ const TedxUWCard: FC = () => {
       className="text"
       onMouseEnter={() => { setIsHovered(true); play(); }}
       onMouseLeave={() => { setIsHovered(false); stop(); }}
-      onClick={() => { stop(); }}
+      onClick={() => { sound.fade(1, 0, 1000); }}
     >
       <motion.div
         className="text"

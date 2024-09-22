@@ -5,7 +5,7 @@ import click from '../../res/audio/Button Click.wav';
 import useSound from 'use-sound';
 
 const LoudButton: FC<ButtonProps & { href?: string, target?: string }> = (props) => {
-  const [play] = useSound(click as string);
+  const [play] = useSound(click as string, { volume: 0.5 });
   return (
     <Button {...props} onClick={e => {
       play();

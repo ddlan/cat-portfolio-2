@@ -78,7 +78,7 @@ const computerMotion = {
 };
 
 const About: FC = () => {
-  const [play] = useSound(computerNoise as string);
+  const [play] = useSound(computerNoise as string, { volume: 0.5 });
 
   const graphParentRef = useRef<HTMLDivElement>(null);
   const { width, height } = useResize(graphParentRef);

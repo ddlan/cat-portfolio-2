@@ -66,7 +66,7 @@ interface TProps {
 
 const BrowserSidebar: FC<TProps> = ({ isWork }) => {
   const [catIsHovered, setCatIsHovered] = useState(false);
-  const [play] = useSound(click as string);
+  const [play] = useSound(click as string, { volume: 0.5 });
 
   const toggleSection = isWork
     ? {
