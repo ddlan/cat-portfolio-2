@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import { VStack, Image, Text, Box, HStack, Grid, GridItem, Link } from '@chakra-ui/react';
+import { VStack, Image, Text, Box, HStack } from '@chakra-ui/react';
 
 import computer from '../images/new/computer.svg';
 import adobeLogo from '../images/new/adobe-logo.svg';
@@ -7,21 +7,12 @@ import microsoftLogo from '../images/new/microsoft-logo.svg';
 import tedxLogo from '../images/new/tedx-logo.svg';
 import collabLogo from '../images/new/collab-logo.svg';
 import scribble from '../images/new/scribble.svg';
-import twitter from '../images/new/twitter.svg';
-import email from '../images/new/email.svg';
 
 import '../styles/styles.css';
 import CaseStudyCard from '../components/cards/CaseStudyCard';
 import SideProjectCard from '../components/cards/SideProjectCard';
-import { SCard, SHeading } from '../styles/components';
-import styled from 'styled-components';
-import CustomTag from '../components/shared/CustomTag';
-import LinkButton from '../components/shared/LinkButton';
-
-const SUnderlinedText = styled(Text)`
-  text-decoration: underline;
-  display: inline;
-`;
+import { SCard } from '../styles/components';
+import AboutSection from '../components/about/AboutSection';
 
 const caseStudies = [
   {
@@ -140,42 +131,7 @@ const Homepage: FC = () => {
         gap='20px'
       >
         <SCard p='12px 16px 12px 16px'><Text>About</Text></SCard>
-        <Grid templateColumns='repeat(2, 1fr)'>
-          <GridItem w='100%'>
-            <SCard p='20px 12px 20px 12px'>
-              <VStack align='start' gap='20px'>
-                <SHeading color='black' fontWeight='400' fontSize='26px'>Cat Hoang</SHeading>
-                <Text>
-                  {/* eslint-disable-next-line max-len */}
-                  A Toronto-based designer who fell in love with tinkering on projects and dabbling in all things creative to light joy in others.
-                  <br /><br/>
-                  She is often excited and makes it a mission to spark intellectual surprise through her designs.
-                  <br /><br/>
-                  Check out how Cat&nbsp;
-                  <Link href='https://catherinehoang.substack.com/'>
-                    <SUnderlinedText>thinks</SUnderlinedText> 💭
-                  </Link>,&nbsp;
-                  <Link href='https://whoiscat.framer.website/'>
-                    <SUnderlinedText>grows</SUnderlinedText> 🌱
-                  </Link>,&nbsp;
-                  <Link href='https://game-of-life.framer.website/'>
-                    <SUnderlinedText>works</SUnderlinedText> 👷🏻
-                  </Link> , and&nbsp;
-                  <Link href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
-                    <SUnderlinedText>loves</SUnderlinedText> 💜
-                  </Link>.
-                </Text>
-                <HStack justify='space-between' w='100%'>
-                  <CustomTag tag='Product Designer' />
-                  <HStack>
-                    <LinkButton href='https://twitter.com/CatHoang_' image={twitter} />
-                    <LinkButton href='mailto:catherinehoang44@gmail.com' image={email} />
-                  </HStack>
-                </HStack>
-              </VStack>
-            </SCard>
-          </GridItem>
-        </Grid>
+        <AboutSection />
       </VStack>
 
       <Box h='150px' w='100%' />
