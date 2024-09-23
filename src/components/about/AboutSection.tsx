@@ -77,6 +77,7 @@ const AboutSection: FC = () => {
           {/* eslint-disable-next-line max-len */}
           A Toronto-based designer who fell in love with tinkering on projects and dabbling in all things creative to light joy in others.
           <br /><br/>
+           {/* eslint-disable-next-line max-len */}
           She is often excited and makes it a mission to spark intellectual surprise through her designs.
           <br /><br/>
           Check out how Cat&nbsp;
@@ -124,7 +125,14 @@ const AboutSection: FC = () => {
         flex='1'
         overflow='hidden'
       >
-        <Image src={paper} position='absolute' h='100%' w={height - 36} left='12px' borderRadius='4px'/>
+        <Image
+          src={paper}
+          position='absolute'
+          h='100%'
+          w={height - 36}
+          left='12px'
+          borderRadius='4px'
+        />
         <ForceGraph2D
           ref={graphRef}
           width={width}

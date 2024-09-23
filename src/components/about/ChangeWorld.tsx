@@ -41,6 +41,7 @@ const ChangeWorld: FC = () => {
                   {/* eslint-disable-next-line max-len */}
                   A Toronto-based designer who fell in love with tinkering on projects and dabbling in all things creative to light joy in others.
                   <br /><br />
+                  {/* eslint-disable-next-line max-len */}
                   She is often excited and makes it a mission to spark intellectual surprise through her designs.
                   <br /><br />
                   Check out how Cat&nbsp;

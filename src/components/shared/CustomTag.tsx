@@ -9,7 +9,9 @@ interface TProps {
 
 const CustomTag: FC<TProps> = ({ tag }) => {
   return (
-    <SCard key={tag} p='5px 13px 5px 13px' background='rgb(250, 250, 250)'><Text>{tag}</Text></SCard>
+    <SCard key={tag} p='5px 13px 5px 13px' background='rgb(250, 250, 250)'>
+      <Text>{tag}</Text>
+    </SCard>
   );
 };
 
