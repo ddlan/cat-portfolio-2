@@ -3,6 +3,7 @@ import '../../styles/styles.css';
 import { HStack, Text, VStack } from '@chakra-ui/react';
 import { SCard, SHeading } from '../../styles/components';
 import { Link } from 'react-router-dom';
+import CustomTag from '../shared/CustomTag';
 
 interface TProps {
   title: string
@@ -28,7 +29,7 @@ const CaseStudyCard: FC<TProps> = ({ title, subtitle, image, tags, link }) => {
           </HStack>
           <HStack gap='6px'>
             {tags.map((tag) => (
-              <SCard key={tag} p='5px 13px 5px 13px' background='rgb(250, 250, 250)'><Text>{tag}</Text></SCard>
+              <CustomTag key={tag} tag={tag}/>
             ))}
           </HStack>
         </HStack>

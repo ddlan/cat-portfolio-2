@@ -1,10 +1,10 @@
 import React, { type FC } from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Heading, HStack, Image, Text, VStack } from '@chakra-ui/react';
+import { Heading, HStack, Text, VStack } from '@chakra-ui/react';
 
 import linkImage from '../../images/new/link.svg';
 import '../../styles/styles.css';
 import { SCard } from '../../styles/components';
+import LinkButton from '../shared/LinkButton';
 
 interface TProps {
   title: string
@@ -23,11 +23,7 @@ const SideProjectCard: FC<TProps> = ({ title, subtitle, link }) => {
             </VStack>
           </HStack>
           {link !== undefined && (
-            <Button as={Link} to={link} h='38px' w='38px' borderRadius='100px'
-              background='transparent' border='1px solid #f2f2f2' padding='0'
-              >
-              <Image src={linkImage} />
-            </Button>
+            <LinkButton href={link} image={linkImage} />
           )}
         </HStack>
       </SCard>
