@@ -35,7 +35,7 @@ const App: FC = () =>
               <Route path="/about" element={<About/> } />
               <Route path="/tedxuw" element={<TedxUW/> } />
               <Route path="/adobe" element={<Adobe/> } />
-              <Route path="/challenge" element={<Challenge/> } />
+              <Route path="/collabs" element={<Challenge/> } />
               <Route path="/technova" element={<TechNova/> } />
             </Routes>
           </Box>

@@ -1,7 +1,7 @@
 {
   "name": "cat-portfolio",
   "version": "0.1.0",
-  "homepage": "https://www.catherinehoang.me",
+  "homepage": "https://ddlan.github.io/cat-portfolio-2",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -36,8 +36,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build && cp CNAME ./dist",
-    "deploy": "gh-pages -d build --repo git@github.com:catherinehoang44/cat-portfolio-2.git"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build --repo git@github.com:ddlan/cat-portfolio-2.git",
+    "__predeploy": "yarn build && cp CNAME ./dist",
+    "__deploy": "gh-pages -d build --repo git@github.com:catherinehoang44/cat-portfolio-2.git"
   },
   "eslintConfig": {
     "extends": [

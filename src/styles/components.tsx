@@ -1,18 +1,24 @@
 import { Heading, Image, Text, Card, Divider } from '@chakra-ui/react';
 import styled from 'styled-components';
 
-export const SCard = styled(Card).attrs({
-  border: '1px solid #515151'
-})`
-    border-radius: 12px;
-    background: var(--BG, linear-gradient(180deg, #1F1F1F 0%, #111 100%));
-  `;
+export const SCard = styled(Card).attrs(props => ({
+  background: props.background ?? 'white',
+  borderRadius: '4px',
+  p: props.p ?? '12px'
+}))``;
+
+export const SHeading = styled(Heading).attrs({
+  color: 'black',
+  fontWeight: '400',
+  fontSize: '26px'
+})``;
 
 export const SDivider = styled(Divider).attrs({
   width: '80%',
   borderBottomWidth: '2px',
   my: '16px'
-})``; export const Title = styled(Heading).attrs({
+})``;
+export const Title = styled(Heading).attrs({
   size: 'xl',
   mb: '10px',
   fontWeight: '800',

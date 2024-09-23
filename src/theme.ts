@@ -9,7 +9,7 @@ const config: ThemeConfig = {
 
 const colors = {
   primaryFont: {
-    _light: baseTheme.colors.gray['700'],
+    _light: '#8c8c8c',
     _dark: baseTheme.colors.white
   },
   secondaryFont: {
@@ -30,6 +30,14 @@ export const customTheme = extendTheme({
   fonts: {
     heading: '\'STIX Two Text Variable\', sans-serif',
     body: '\'Inter Variable\', sans-serif'
+  },
+
+  components: {
+    Text: {
+      baseStyle: {
+        fontSize: '13px'
+      }
+    }
   },
 
   semanticTokens: {

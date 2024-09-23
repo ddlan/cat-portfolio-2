@@ -1,39 +1,66 @@
 import React, { type FC } from 'react';
-import { Card, VStack, Image } from '@chakra-ui/react';
+import { VStack, Image, Text, Box, HStack, Grid, GridItem } from '@chakra-ui/react';
 
 import computer from '../images/new/computer.svg';
 import adobeLogo from '../images/new/adobe-logo.svg';
 import microsoftLogo from '../images/new/microsoft-logo.svg';
 import tedxLogo from '../images/new/tedx-logo.svg';
 import collabLogo from '../images/new/collab-logo.svg';
+import scribble from '../images/new/scribble.svg';
 
 import '../styles/styles.css';
 import CaseStudyCard from '../components/cards/CaseStudyCard';
+import SideProjectCard from '../components/cards/SideProjectCard';
+import { SCard, SHeading } from '../styles/components';
 
 const caseStudies = [
   {
     title: 'Learning Platform',
     subtitle: '+500% new users',
-    image: adobeLogo,
-    tags: ['Product Design,', 'Accessibility']
+    image: <Image src={adobeLogo} p='20px'/>,
+    tags: ['Product Design', 'Accessibility'],
+    link: 'adobe'
   },
   {
     title: 'Minecraft Go-to-Market',
     subtitle: '100% YoY growth',
-    image: microsoftLogo,
-    tags: ['Product Strategy', 'Marketing']
+    image: <Image src={microsoftLogo} p='10px'/>,
+    tags: ['Product Strategy', 'Marketing'],
+    link: '/'
   },
   {
     title: 'Site Design',
     subtitle: '150% sign-up KPIs',
-    image: tedxLogo,
-    tags: ['UX Design,', 'Visual Design']
+    image: <Image src={tedxLogo} p='12px'/>,
+    tags: ['UX Design', 'Visual Design'],
+    link: 'tedxuw'
   },
   {
     title: 'Collaborations',
     subtitle: '12 collaborations, 12 weeks',
-    image: collabLogo,
-    tags: ['Motion Design,', 'UX Research']
+    image: <Image src={collabLogo} p='22px'/>,
+    tags: ['Motion Design', 'UX Research'],
+    link: 'collabs'
+  }
+];
+
+const sideProjects = [
+  {
+    title: 'Personal Blog',
+    subtitle: 'A place to dump my learnings.',
+    link: 'technova'
+  },
+  {
+    title: 'Motion Design',
+    subtitle: 'To complement my product designs.'
+  },
+  {
+    title: 'Hardware and 3D',
+    subtitle: 'Making little self-indulgent robots.'
+  },
+  {
+    title: 'Crocheting',
+    subtitle: 'A creative way for me to destress.'
   }
 ];
 
@@ -48,17 +75,69 @@ const Homepage: FC = () => {
 
       <VStack
         w='100%'
+        align='start'
         justifyContent='space-between'
+        gap='20px'
       >
-        <Card>Work</Card>
-        {caseStudies.map(({ title, subtitle, image, tags }) => <CaseStudyCard
+        <SCard p='12px 16px 12px 16px'><Text>Work</Text></SCard>
+        {caseStudies.map(({ title, subtitle, image, tags, link }) => <CaseStudyCard
           key={title}
           title={title}
           subtitle={subtitle}
           image={image}
           tags={tags}
+          link={link}
         />)}
       </VStack>
+
+      <Box h='150px' w='100%' />
+
+      <VStack
+        w='100%'
+        align='start'
+        justifyContent='space-between'
+        gap='20px'
+      >
+        <SCard p='12px 16px 12px 16px'><Text>Side Projects</Text></SCard>
+        <HStack gap='0' justify='start' w='100%'>
+          <VStack
+            h='378px'
+            w='100%'
+            align='start'
+            justifyContent='space-between'
+            gap='20px'
+            flex='1 1 0px'
+          >
+            {sideProjects.map(({ title, subtitle, link }) => <SideProjectCard
+              key={title}
+              title={title}
+              subtitle={subtitle}
+              link={link}
+            />)}
+          </VStack>
+          <SCard flex='1 1 0px' ml='12px'>
+            <Image src={scribble} />
+          </SCard>
+        </HStack>
+      </VStack>
+
+      <Box h='150px' w='100%' />
+
+      <VStack
+        w='100%'
+        align='start'
+        justifyContent='space-between'
+        gap='20px'
+      >
+        <SCard p='12px 16px 12px 16px'><Text>About</Text></SCard>
+        <Grid templateColumns='repeat(2, 1fr)'>
+          <GridItem w='100%'>
+            <SHeading color='black' fontWeight='400' fontSize='26px'>Cat Hoang</SHeading>
+          </GridItem>
+        </Grid>
+      </VStack>
+
+      <Box h='150px' w='100%' />
     </VStack>
   );
 };
