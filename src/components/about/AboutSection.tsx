@@ -13,6 +13,7 @@ import move from '../../images/new/move.svg';
 
 import CustomTag from '../shared/CustomTag';
 import LinkButton from '../shared/LinkButton';
+import DonutChart from './DonutChart';
 
 const SUnderlinedText = styled(Text)`
   text-decoration: underline;
@@ -128,7 +129,7 @@ const AboutSection: FC = () => {
         <Image
           src={paper}
           position='absolute'
-          h='100%'
+          h='93%'
           w={height - 36}
           left='12px'
           borderRadius='4px'
@@ -179,11 +180,17 @@ const AboutSection: FC = () => {
             ctx.fillText(label, node.x, node.y);
           }}
         />
-        <HStack position='absolute' right='16px' bottom='12px'>
+        <HStack position='absolute' right='18px' bottom='14px'>
           <Image h='12px' w='12px' src={move}/>
           <Text color="#d6d5db">Move and drag</Text>
         </HStack>
       </VStack>
+    </SCard>
+  );
+
+  const renderChart = () => (
+    <SCard p='20px 12px 20px 12px'>
+      <DonutChart />
     </SCard>
   );
 
@@ -196,7 +203,7 @@ const AboutSection: FC = () => {
             {renderMindMap()}
           </GridItem>
           <GridItem w='100%'>
-            {renderIntroCard()}
+            {renderChart()}
           </GridItem>
           <GridItem w='100%'>
             {renderIntroCard()}
