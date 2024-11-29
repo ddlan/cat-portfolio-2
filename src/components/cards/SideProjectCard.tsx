@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import { Heading, HStack, Text, VStack } from '@chakra-ui/react';
+import { Heading, HStack, Link, Text, VStack } from '@chakra-ui/react';
 
 import linkImage from '../../images/new/link.svg';
 import '../../styles/styles.css';
@@ -13,8 +13,8 @@ interface TProps {
 };
 
 const SideProjectCard: FC<TProps> = ({ title, subtitle, link }) => {
-  return (
-      <SCard w='100%'>
+  const card = (
+      <SCard className='hover-card' w='100%'>
         <HStack justify='space-between'>
           <HStack gap='20px'>
             <VStack align='start' gap='0'>
@@ -27,6 +27,14 @@ const SideProjectCard: FC<TProps> = ({ title, subtitle, link }) => {
           )}
         </HStack>
       </SCard>
+  );
+
+  if (link === undefined) return card;
+
+  return (
+    <Link href={link} w='100%' style={{ textDecoration: 'none' }}>
+      {card}
+    </Link>
   );
 };
 
