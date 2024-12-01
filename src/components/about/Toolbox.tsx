@@ -8,17 +8,17 @@ import paper from '../../images/new/paper.svg';
 import figma from '../../images/new/figma.svg';
 import notion from '../../images/new/notion.svg';
 import miro from '../../images/new/miro.svg';
-import logoR from '../../images/new/logo-r.svg';
+import fiveApp from '../../images/new/logo-r.svg';
 import framer from '../../images/new/framer.svg';
-import logoU from '../../images/new/logo-u.svg';
+import userTesting from '../../images/new/logo-u.svg';
 
 const tools = [
   { name: 'Figma', image: figma },
   { name: 'Notion', image: notion },
   { name: 'Miro', image: miro },
-  { name: 'logoR', image: logoR },
+  { name: 'five.app', image: fiveApp },
   { name: 'Framer', image: framer },
-  { name: 'logoU', image: logoU }
+  { name: 'usertesting.com', image: userTesting }
 ];
 
 const Toolbox: FC = () => {

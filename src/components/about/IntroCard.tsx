@@ -29,16 +29,16 @@ const IntroCard: FC = () => {
           <br /><br />
           Check out how Cat&nbsp;
           <Link href='https://catherinehoang.substack.com/'>
-            <SUnderlinedText>thinks</SUnderlinedText> 💭
+            <SUnderlinedText textColor='black'>thinks</SUnderlinedText>
           </Link>,&nbsp;
           <Link href='https://whoiscat.framer.website/'>
-            <SUnderlinedText>grows</SUnderlinedText> 🌱
+            <SUnderlinedText textColor='black'>grows</SUnderlinedText>
           </Link>,&nbsp;
           <Link href='https://game-of-life.framer.website/'>
-            <SUnderlinedText>works</SUnderlinedText> 👷🏻
-          </Link> , and&nbsp;
+            <SUnderlinedText textColor='black'>works</SUnderlinedText>
+          </Link>, and&nbsp;
           <Link href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
-            <SUnderlinedText>loves</SUnderlinedText> 💜
+            <SUnderlinedText textColor='black'>loves</SUnderlinedText>
           </Link>.
         </Text>
         <HStack justify='space-between' w='100%'>

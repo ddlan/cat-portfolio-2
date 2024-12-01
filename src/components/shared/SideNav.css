@@ -1,0 +1,16 @@
+.floating-nav {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 20px;  /* Stick to the left */
+    transform: translateY(-50%);
+    background: white;
+    color: black;
+    padding: 4px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above other content */
+    border-radius: 4px;
+  }
+  
+  .floating-nav a:hover {
+    background-color: #bbb; /* Highlight on hover */
+  }

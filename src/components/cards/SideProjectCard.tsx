@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { useState, type FC } from 'react';
 import { Heading, HStack, Link, Text, VStack } from '@chakra-ui/react';
 
 import linkImage from '../../images/new/link.svg';
@@ -13,8 +13,15 @@ interface TProps {
 };
 
 const SideProjectCard: FC<TProps> = ({ title, subtitle, link }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   const card = (
-      <SCard className='hover-card' w='100%'>
+      <SCard
+        className={link !== undefined ? 'hover-card' : ''}
+        w='100%'
+        onMouseOver={() => { setIsHovered(true); }}
+        onMouseOut={() => { setIsHovered(false); }}
+      >
         <HStack justify='space-between'>
           <HStack gap='20px'>
             <VStack align='start' gap='0'>
@@ -22,8 +29,8 @@ const SideProjectCard: FC<TProps> = ({ title, subtitle, link }) => {
               <Text>{subtitle}</Text>
             </VStack>
           </HStack>
-          {link !== undefined && (
-            <LinkButton href={link} image={linkImage} />
+          {link !== undefined && isHovered && (
+            <LinkButton href={link} image={linkImage} style={{ pointerEvents: 'none' }} />
           )}
         </HStack>
       </SCard>

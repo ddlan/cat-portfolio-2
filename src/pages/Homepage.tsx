@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import { VStack, Image, Text, Box, HStack } from '@chakra-ui/react';
+import { VStack, Image, Text, Box, HStack, Icon } from '@chakra-ui/react';
 
 import computer from '../images/new/computer.svg';
 import adobeLogo from '../images/new/adobe-logo.svg';
@@ -8,11 +8,18 @@ import tedxLogo from '../images/new/tedx-logo.svg';
 import collabLogo from '../images/new/collab-logo.svg';
 import scribble from '../images/new/scribble.svg';
 
+import briefcase from '../images/new/briefcase.svg';
+import lightbulb from '../images/new/lightbulb.svg';
+import avatar from '../images/new/avatar.svg';
+import document from '../images/new/document.svg';
+import bag from '../images/new/bag.svg';
+
 import '../styles/styles.css';
 import CaseStudyCard from '../components/cards/CaseStudyCard';
 import SideProjectCard from '../components/cards/SideProjectCard';
 import { SCard } from '../styles/components';
 import AboutSection from '../components/about/AboutSection';
+import SideNav from '../components/shared/SideNav';
 
 const caseStudies = [
   {
@@ -71,7 +78,42 @@ const Homepage: FC = () => {
       w='630px'
       my='100px'
       mx='auto'
->
+    >
+      <SideNav
+        items={[
+          {
+            content: <Image src={briefcase} />,
+            label: 'Work',
+            showTooltip: true,
+            onClick: () => {}
+          },
+          {
+            content: <Image src={lightbulb} />,
+            label: 'Side projects',
+            showTooltip: true,
+            onClick: () => {}
+          },
+          {
+            content: <Image src={avatar} />,
+            label: 'About',
+            showTooltip: true,
+            onClick: () => {}
+          },
+          {
+            content: <Image src={document} />,
+            label: 'Resume',
+            showTooltip: true,
+            onClick: () => {}
+          },
+          {
+            content: <Image src={bag} color='#8c8c8c' />,
+            label: 'Design Studio',
+            showTooltip: true,
+            onClick: () => {}
+          }
+        ]}
+      />
+
       <Image src={computer} w='100%'/>
 
       <VStack
