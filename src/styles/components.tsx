@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export const SCard = styled(Card).attrs(props => ({
   background: props.background ?? 'white',
   borderRadius: '4px',
-  p: props.p ?? '12px'
+  p: props.p ?? '12px',
+  scrollMarginTop: '20px'
 }))``;
 
 export const SHeading = styled(Heading).attrs({

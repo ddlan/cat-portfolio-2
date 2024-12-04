@@ -1,5 +1,5 @@
-import React, { type FC } from 'react';
-import { VStack, Image, Text, Box, HStack, Icon } from '@chakra-ui/react';
+import React, { useRef, type FC } from 'react';
+import { VStack, Image, Text, Box, HStack } from '@chakra-ui/react';
 
 import computer from '../images/new/computer.svg';
 import adobeLogo from '../images/new/adobe-logo.svg';
@@ -14,12 +14,15 @@ import avatar from '../images/new/avatar.svg';
 import document from '../images/new/document.svg';
 import bag from '../images/new/bag.svg';
 
+import resume from '../res/catherine-hoang.pdf';
+
 import '../styles/styles.css';
 import CaseStudyCard from '../components/cards/CaseStudyCard';
 import SideProjectCard from '../components/cards/SideProjectCard';
 import { SCard } from '../styles/components';
 import AboutSection from '../components/about/AboutSection';
 import SideNav from '../components/shared/SideNav';
+import { onClickUrl } from '../util';
 
 const caseStudies = [
   {
@@ -73,6 +76,10 @@ const sideProjects = [
 ];
 
 const Homepage: FC = () => {
+  const workRef = useRef<HTMLDivElement>(null);
+  const sideProjRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+
   return (
     <VStack h='100%'
       w='630px'
@@ -85,25 +92,31 @@ const Homepage: FC = () => {
             content: <Image src={briefcase} />,
             label: 'Work',
             showTooltip: true,
-            onClick: () => {}
+            onClick: () => {
+              workRef.current?.scrollIntoView({ behavior: 'smooth' });
+            }
           },
           {
             content: <Image src={lightbulb} />,
             label: 'Side projects',
             showTooltip: true,
-            onClick: () => {}
+            onClick: () => {
+              sideProjRef.current?.scrollIntoView({ behavior: 'smooth' });
+            }
           },
           {
             content: <Image src={avatar} />,
             label: 'About',
             showTooltip: true,
-            onClick: () => {}
+            onClick: () => {
+              aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+            }
           },
           {
             content: <Image src={document} />,
             label: 'Resume',
             showTooltip: true,
-            onClick: () => {}
+            onClick: onClickUrl(resume as string)
           },
           {
             content: <Image src={bag} color='#8c8c8c' />,
@@ -122,7 +135,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SCard p='12px 16px 12px 16px'><Text>Work</Text></SCard>
+        <SCard p='12px 16px 12px 16px' ref={workRef}><Text>Work</Text></SCard>
         {caseStudies.map(({ title, subtitle, image, tags, link }) => <CaseStudyCard
           key={title}
           title={title}
@@ -141,7 +154,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SCard p='12px 16px 12px 16px'><Text>Side Projects</Text></SCard>
+        <SCard p='12px 16px 12px 16px' ref={sideProjRef}><Text>Side Projects</Text></SCard>
         <HStack gap='0' justify='start' w='100%'>
           <VStack
             h='378px'
@@ -172,7 +185,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SCard p='12px 16px 12px 16px'><Text>About</Text></SCard>
+        <SCard p='12px 16px 12px 16px' ref={aboutRef}><Text>About</Text></SCard>
         <AboutSection />
       </VStack>
 
