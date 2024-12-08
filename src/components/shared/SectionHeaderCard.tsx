@@ -5,15 +5,15 @@ import { Text } from '@chakra-ui/react';
 
 interface TProps {
   title: string
-  ref: React.RefObject<HTMLDivElement>
+  scrollRef: React.RefObject<HTMLDivElement>
 }
 
 const SectionHeaderCard: FC<TProps> = ({
   title,
-  ref
+  scrollRef
 }) => {
   return (
-    <SCard p='12px 16px' ref={ref}><Text>{title}</Text></SCard>
+    <SCard p='12px 16px' ref={scrollRef}><Text>{title}</Text></SCard>
   );
 };
 

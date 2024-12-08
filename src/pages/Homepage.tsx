@@ -136,7 +136,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SectionHeaderCard title='Work' ref={workRef} />
+        <SectionHeaderCard title='Work' scrollRef={workRef} />
         {caseStudies.map(({ title, subtitle, image, tags, link }) => <CaseStudyCard
           key={title}
           title={title}
@@ -155,7 +155,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SectionHeaderCard title='Work' ref={workRef} />
+        <SectionHeaderCard title='Work' scrollRef={workRef} />
         <HStack gap='0' justify='start' w='100%'>
           <VStack
             h='378px'
@@ -186,7 +186,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SectionHeaderCard title='About' ref={aboutRef} />
+        <SectionHeaderCard title='About' scrollRef={aboutRef} />
         <AboutSection />
       </VStack>
 
