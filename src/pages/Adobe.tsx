@@ -1,59 +1,76 @@
 import React, { useRef, type FC } from 'react';
 import {
-  Box, HStack, Spacer, VStack
+  Box, HStack, Image, Spacer, Text, VStack
 } from '@chakra-ui/react';
 
 import '../styles/styles.css';
 
-import Navbar from '../components/Navbar';
-import AdobeIntro from '../components/adobe/AdobeIntro';
-import Pieces from '../components/adobe/Pieces';
-import { PrototypeFrame } from '../styles/components';
-import Clicking from '../components/adobe/Clicking';
-import Unforgettable from '../components/adobe/Unforgettable';
-import BackToTop from '../components/shared/BackToTop';
-import { PROTOTYPES } from '../constants';
-import Choosing from '../components/adobe/Choosing';
+import SideNav from '../components/shared/SideNav';
 
 const Adobe: FC = () => {
-  const takeawaysRef = useRef<HTMLDivElement>(null);
-  const scrollToTakeaways = (): void => {
-    takeawaysRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const ref = useRef<HTMLDivElement>(null);
+
+  const sideNav = (
+    <SideNav
+      items={[
+        {
+          name: 'Highlights',
+          ref
+        },
+        {
+          name: 'Overview',
+          ref
+        },
+        {
+          name: 'Context',
+          ref
+        },
+        {
+          name: 'Problem',
+          ref
+        },
+        {
+          name: 'Flow',
+          ref
+        },
+        {
+          name: 'Layout',
+          ref
+        },
+        {
+          name: 'Interactions',
+          ref
+        },
+        {
+          name: 'Visual Design',
+          ref
+        },
+        {
+          name: 'Final Design',
+          ref
+        },
+        {
+          name: 'Retro',
+          ref
+        }
+      ].map(({ name, ref }) => ({
+        content: <Text color='#8c8c8c' fontWeight='400'>{name}</Text>,
+        label: name,
+        onClick: () => {
+          ref.current?.scrollIntoView({ behavior: 'smooth' });
+        }
+      }))}
+    />
+  );
 
   return (
     <Box>
-      <Navbar isWork={true} />
       <Box
         mt="100px"
         mx='20vw'
       >
-        <AdobeIntro scrollToTakeaways={scrollToTakeaways} />
-        <Spacer height='200px' />
-
-        <HStack className='wide-prototype' gap='12px'>
-          <PrototypeFrame className='left-prototype' src={PROTOTYPES.adobeCert} />
-          <VStack gap='12px'>
-            <PrototypeFrame className='right-prototype' src={PROTOTYPES.adobeScrollable} />
-            <PrototypeFrame className='right-prototype' src={PROTOTYPES.adobePFP} />
-          </VStack>
-        </HStack>
-        <Spacer height='200px' />
-
-        <Choosing />
-        <Spacer height='200px' />
-
-        <Pieces />
-        <Spacer height='200px' />
-
-        <Clicking />
-        <Spacer height='200px' />
-
-        <Unforgettable takeawaysRef={takeawaysRef} />
-        <Spacer height='200px' />
-
-        <BackToTop />
-        <Spacer height='50px' />
+        {sideNav}
+        Adober
       </Box>
     </Box>
   );

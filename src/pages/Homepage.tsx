@@ -1,5 +1,5 @@
 import React, { useRef, type FC } from 'react';
-import { VStack, Image, Text, Box, HStack } from '@chakra-ui/react';
+import { VStack, Image, Box, HStack } from '@chakra-ui/react';
 
 import computer from '../images/new/computer.svg';
 import adobeLogo from '../images/new/adobe-logo.svg';
@@ -23,6 +23,7 @@ import { SCard } from '../styles/components';
 import AboutSection from '../components/about/AboutSection';
 import SideNav from '../components/shared/SideNav';
 import { onClickUrl } from '../util';
+import SectionHeaderCard from '../components/shared/SectionHeaderCard';
 
 const caseStudies = [
   {
@@ -135,7 +136,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SCard p='12px 16px 12px 16px' ref={workRef}><Text>Work</Text></SCard>
+        <SectionHeaderCard title='Work' ref={workRef} />
         {caseStudies.map(({ title, subtitle, image, tags, link }) => <CaseStudyCard
           key={title}
           title={title}
@@ -154,7 +155,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SCard p='12px 16px 12px 16px' ref={sideProjRef}><Text>Side Projects</Text></SCard>
+        <SectionHeaderCard title='Work' ref={workRef} />
         <HStack gap='0' justify='start' w='100%'>
           <VStack
             h='378px'
@@ -185,7 +186,7 @@ const Homepage: FC = () => {
         justifyContent='space-between'
         gap='20px'
       >
-        <SCard p='12px 16px 12px 16px' ref={aboutRef}><Text>About</Text></SCard>
+        <SectionHeaderCard title='About' ref={aboutRef} />
         <AboutSection />
       </VStack>
 

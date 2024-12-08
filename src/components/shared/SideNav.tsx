@@ -24,6 +24,8 @@ const SideNav: FC<TProps> = ({ items }) => {
             onClick={onClick}
             background='white'
             size='sm'
+            width='100%'
+            justifyContent='start'
           >
             {content}
           </Button>
