@@ -1,14 +1,12 @@
 {
   "files": {
-    "main.css": "/cat-portfolio-2/static/css/main.78ffcefa.css",
-    "main.js": "/cat-portfolio-2/static/js/main.98735d58.js",
+    "main.css": "/cat-portfolio-2/static/css/main.f2263569.css",
+    "main.js": "/cat-portfolio-2/static/js/main.d26ab000.js",
     "static/js/845.5b0d91d1.chunk.js": "/cat-portfolio-2/static/js/845.5b0d91d1.chunk.js",
     "static/js/787.db760d71.chunk.js": "/cat-portfolio-2/static/js/787.db760d71.chunk.js",
     "static/media/wics.png": "/cat-portfolio-2/static/media/wics.c5d4399ed3589f722185.png",
     "static/media/catherine-hoang.pdf": "/cat-portfolio-2/static/media/catherine-hoang.b7756c337df507a7bcd2.pdf",
-    "static/media/adobe-figma.png": "/cat-portfolio-2/static/media/adobe-figma.4a0809666682138fe1e5.png",
     "static/media/ted-portfolio.png": "/cat-portfolio-2/static/media/ted-portfolio.6def00337e17186a8ef7.png",
-    "static/media/adobe-mission.png": "/cat-portfolio-2/static/media/adobe-mission.eacbc57e68cad01257eb.png",
     "static/media/scribble.svg": "/cat-portfolio-2/static/media/scribble.c8681ed64eaed44e631db814e8036eb4.svg",
     "static/media/journey-map.png": "/cat-portfolio-2/static/media/journey-map.6b6c6372d308010102f4.png",
     "static/media/donut-hole.svg": "/cat-portfolio-2/static/media/donut-hole.4b53a9d50b0aeb2a2d16a85eefcb3191.svg",
@@ -28,7 +26,6 @@
     "static/media/AdobeClean-Medium.otf": "/cat-portfolio-2/static/media/AdobeClean-Medium.8d951852fb1910dc003a.otf",
     "static/media/AdobeClean-Light.otf": "/cat-portfolio-2/static/media/AdobeClean-Light.b94d7b86ed77076e40da.otf",
     "static/media/schedule2.png": "/cat-portfolio-2/static/media/schedule2.4a54b3b07a284de00606.png",
-    "static/media/adobe-research.png": "/cat-portfolio-2/static/media/adobe-research.936d83046f1d433537d3.png",
     "static/media/computer.png": "/cat-portfolio-2/static/media/computer.dd1a31b8059a16f12069.png",
     "static/media/microsoft-logo.svg": "/cat-portfolio-2/static/media/microsoft-logo.1db5c5c8439bd49f1fcb1cc47f36cb17.svg",
     "static/media/Button Click.wav": "/cat-portfolio-2/static/media/Button Click.91a2fc3f32e2a125cecc.wav",
@@ -63,15 +60,11 @@
     "static/media/inter-vietnamese-wght-normal.woff2": "/cat-portfolio-2/static/media/inter-vietnamese-wght-normal.ab4bb8dcda024fe6eff2.woff2",
     "static/media/stix-two-text-vietnamese-wght-normal.woff2": "/cat-portfolio-2/static/media/stix-two-text-vietnamese-wght-normal.617f422248df2cea46a4.woff2",
     "static/media/logo-r.svg": "/cat-portfolio-2/static/media/logo-r.66eb491425274bf6c47a5d6f241f789f.svg",
-    "static/media/puzz1.svg": "/cat-portfolio-2/static/media/puzz1.bc098c3ab3ebd93134c9d3f423fdf877.svg",
-    "static/media/puzz0.svg": "/cat-portfolio-2/static/media/puzz0.2d179b00fd983a0e1851aaeaa8bad165.svg",
     "static/media/stix-two-text-cyrillic-ext-wght-normal.woff2": "/cat-portfolio-2/static/media/stix-two-text-cyrillic-ext-wght-normal.12f0e409c6c70f744c44.woff2",
-    "static/media/puzz3.svg": "/cat-portfolio-2/static/media/puzz3.65837d4ed53785c517c46048fa221d1c.svg",
     "static/media/collab-logo.svg": "/cat-portfolio-2/static/media/collab-logo.6927ba40d21c73c414fa0ef231cd495f.svg",
     "static/media/figma.svg": "/cat-portfolio-2/static/media/figma.0a929af11f1b588d204752cfe87fa797.svg",
     "static/media/miro.svg": "/cat-portfolio-2/static/media/miro.abcb79b8cf66fcc87e288db417ee3985.svg",
     "static/media/twitter.svg": "/cat-portfolio-2/static/media/twitter.daf38cad888f6cec6863d3b56828d90c.svg",
-    "static/media/puzz2.svg": "/cat-portfolio-2/static/media/puzz2.2887d81413f8130153123e064e1c3aaa.svg",
     "static/media/folder.svg": "/cat-portfolio-2/static/media/folder.102e5e7d648a7f494d943ddeb2847af8.svg",
     "static/media/briefcase.svg": "/cat-portfolio-2/static/media/briefcase.43c25027bda26373e2a73514afb07806.svg",
     "static/media/email.svg": "/cat-portfolio-2/static/media/email.854cf9ec59627ce90c2c8c8dba8976dd.svg",
@@ -86,13 +79,13 @@
     "static/media/lock.svg": "/cat-portfolio-2/static/media/lock.92c4b0bbb4f970c748117da8592c462e.svg",
     "static/media/link.svg": "/cat-portfolio-2/static/media/link.f38bb77051e8fff5ab845e27f1d76b7e.svg",
     "static/media/move.svg": "/cat-portfolio-2/static/media/move.3394612f5175403851fde3eae1e1130d.svg",
-    "main.78ffcefa.css.map": "/cat-portfolio-2/static/css/main.78ffcefa.css.map",
-    "main.98735d58.js.map": "/cat-portfolio-2/static/js/main.98735d58.js.map",
+    "main.f2263569.css.map": "/cat-portfolio-2/static/css/main.f2263569.css.map",
+    "main.d26ab000.js.map": "/cat-portfolio-2/static/js/main.d26ab000.js.map",
     "845.5b0d91d1.chunk.js.map": "/cat-portfolio-2/static/js/845.5b0d91d1.chunk.js.map",
     "787.db760d71.chunk.js.map": "/cat-portfolio-2/static/js/787.db760d71.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78ffcefa.css",
-    "static/js/main.98735d58.js"
+    "static/css/main.f2263569.css",
+    "static/js/main.d26ab000.js"
   ]
 }
