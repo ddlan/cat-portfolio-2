@@ -1,15 +1,17 @@
 import React, { type FC } from 'react';
 import {
-  Box, Divider, Heading, HStack, Image, VStack
+  Box, Heading, HStack, Image, VStack
 } from '@chakra-ui/react';
 
 import '../../../styles/styles.css';
 
 import adobeLogo from '../../../images/new/adobe-logo.svg';
+import adobeBox from '../../../images/new/adobe-box.png';
 
 import SectionHeaderCard from '../../../components/shared/SectionHeaderCard';
 import MediaCard from '../../../components/adobe/new/MediaCard';
 import { SCard } from '../../../styles/components';
+import { AdobeHeading } from '../../shared';
 
 interface TProps {
   scrollRef: React.RefObject<HTMLDivElement>
@@ -30,16 +32,16 @@ const Highlights: FC<TProps> = ({ scrollRef }) => {
           <HStack p='16px' gap='16px'>
             <SCard p='20px'><Image src={adobeLogo} /></SCard>
             <VStack alignItems='start'>
-              <Heading as='h2' color='black' fontSize='26px' fontWeight='400' lineHeight='1'>
+              <AdobeHeading>
                 Learning Platform for Adobe B2B Products
-              </Heading>
+              </AdobeHeading>
               <Heading as='h4' fontSize='14px' fontFamily='Helvetica' fontWeight='400'>
                 Since launch, achieved +500% Adobe credentialed, +300% retention, $4M+ revenue
               </Heading>
             </VStack>
           </HStack>
-          <Divider />
-          <Box w='100%' h='400px'/>
+          {/* <Divider /> */}
+          <Image src={adobeBox} w='100%' />
         </Box>
       )}
       sectionNum='0.0'

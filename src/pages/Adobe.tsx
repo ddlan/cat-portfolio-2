@@ -1,6 +1,6 @@
 import React, { useRef, type FC } from 'react';
 import {
-  Box, Button, Text
+  Box, Button, VStack, Text
 } from '@chakra-ui/react';
 
 import '../styles/styles.css';
@@ -9,6 +9,9 @@ import SideNav from '../components/shared/SideNav';
 import { useNavigate } from 'react-router-dom';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 import Highlights from '../components/adobe/new/Highlights';
+import Overview from '../components/adobe/new/Overview';
+import Context from '../components/adobe/new/Context';
+import Problem from '../components/adobe/new/Problem';
 
 const Adobe: FC = () => {
   const navigate = useNavigate();
@@ -66,13 +69,18 @@ const Adobe: FC = () => {
         >
           <ArrowBackIcon mr='8px'/> <Text color='#8c8c8c' fontWeight='400'>Back</Text>
         </Button>
-      <Box
+      <VStack
         mt="80px"
         mx='20vw'
+        gap='72px'
       >
         {sideNav}
         <Highlights scrollRef={highlightsRef} />
-      </Box>
+        <Overview scrollRef={overviewRef} />
+        <Context scrollRef={contextRef} />
+        <Problem scrollRef={problemRef} />
+      </VStack>
+      <div style={{ height: '72px' }} />
     </Box>
   );
 };
