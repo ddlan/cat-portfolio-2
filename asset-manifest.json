@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cat-portfolio-2/static/css/main.f2263569.css",
-    "main.js": "/cat-portfolio-2/static/js/main.e69e6132.js",
+    "main.js": "/cat-portfolio-2/static/js/main.5afa82a4.js",
     "static/js/845.5b0d91d1.chunk.js": "/cat-portfolio-2/static/js/845.5b0d91d1.chunk.js",
     "static/js/787.db760d71.chunk.js": "/cat-portfolio-2/static/js/787.db760d71.chunk.js",
     "static/media/wics.png": "/cat-portfolio-2/static/media/wics.c5d4399ed3589f722185.png",
@@ -38,6 +38,7 @@
     "static/media/nav-bg.png": "/cat-portfolio-2/static/media/nav-bg.acfa06cfe3ccf1427206.png",
     "static/media/inter-latin-wght-normal.woff2": "/cat-portfolio-2/static/media/inter-latin-wght-normal.640b10a7966d94927c2e.woff2",
     "static/media/stix-two-text-latin-ext-wght-normal.woff2": "/cat-portfolio-2/static/media/stix-two-text-latin-ext-wght-normal.4a86e8b27c9055e7d816.woff2",
+    "static/media/adobe-scope.png": "/cat-portfolio-2/static/media/adobe-scope.2294f44732a81c26efe1.png",
     "static/media/sidebar-happy-cat.png": "/cat-portfolio-2/static/media/sidebar-happy-cat.f961e8113ee6b86f1a9b.png",
     "static/media/sidebar-cat.png": "/cat-portfolio-2/static/media/sidebar-cat.f9462299f4233d505adc.png",
     "static/media/stix-two-text-latin-wght-normal.woff2": "/cat-portfolio-2/static/media/stix-two-text-latin-wght-normal.df297726047608ba604f.woff2",
@@ -50,6 +51,7 @@
     "static/media/ClashDisplay-Extralight.otf": "/cat-portfolio-2/static/media/ClashDisplay-Extralight.86f6ced9b205fb5ec080.otf",
     "static/media/inter-greek-wght-normal.woff2": "/cat-portfolio-2/static/media/inter-greek-wght-normal.e322bb327758c5fc4be5.woff2",
     "static/media/inter-cyrillic-wght-normal.woff2": "/cat-portfolio-2/static/media/inter-cyrillic-wght-normal.2008fa337b88a5ae6346.woff2",
+    "static/media/adobe-box.png": "/cat-portfolio-2/static/media/adobe-box.e1f9b0f8602137bfc299.png",
     "static/media/adobe-logo.svg": "/cat-portfolio-2/static/media/adobe-logo.84a195ad856360d42b2e9fc31e95251f.svg",
     "static/media/stix-two-text-cyrillic-wght-normal.woff2": "/cat-portfolio-2/static/media/stix-two-text-cyrillic-wght-normal.7a73d5920672a6f28e05.woff2",
     "static/media/Computer Processing.mp3": "/cat-portfolio-2/static/media/Computer Processing.b37ae8b32c9f1adeb14a.mp3",
@@ -78,14 +80,16 @@
     "index.html": "/cat-portfolio-2/index.html",
     "static/media/lock.svg": "/cat-portfolio-2/static/media/lock.92c4b0bbb4f970c748117da8592c462e.svg",
     "static/media/link.svg": "/cat-portfolio-2/static/media/link.f38bb77051e8fff5ab845e27f1d76b7e.svg",
+    "static/media/circle-x.svg": "/cat-portfolio-2/static/media/circle-x.8b859dd281715c0109b0033506bd0628.svg",
     "static/media/move.svg": "/cat-portfolio-2/static/media/move.3394612f5175403851fde3eae1e1130d.svg",
+    "static/media/circle-check.svg": "/cat-portfolio-2/static/media/circle-check.5d0d8285bae0c17ac1281a805c72a23e.svg",
     "main.f2263569.css.map": "/cat-portfolio-2/static/css/main.f2263569.css.map",
-    "main.e69e6132.js.map": "/cat-portfolio-2/static/js/main.e69e6132.js.map",
+    "main.5afa82a4.js.map": "/cat-portfolio-2/static/js/main.5afa82a4.js.map",
     "845.5b0d91d1.chunk.js.map": "/cat-portfolio-2/static/js/845.5b0d91d1.chunk.js.map",
     "787.db760d71.chunk.js.map": "/cat-portfolio-2/static/js/787.db760d71.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f2263569.css",
-    "static/js/main.e69e6132.js"
+    "static/js/main.5afa82a4.js"
   ]
 }
